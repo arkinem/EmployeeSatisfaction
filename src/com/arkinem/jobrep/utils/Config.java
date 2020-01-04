@@ -5,23 +5,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class Config {
 
-	private static final String currentDir = System.getProperty("user.dir");
+public final class Config {
+    private static final String currentDir = System.getProperty("user.dir");
 	private static final String configPath = currentDir + "/config.properties";
-	private int port;
-
-	public Config() {
-		Properties props = readConfig();
-
-		if (props != null) {
-			port = Integer.parseInt(props.getProperty("port"));
-		} else {
-			System.out.println("Something went wrong while reading config file.");
-		}
-	}
-
-	private Properties readConfig() {
+	private static Properties props = readConfig();
+	
+	
+	private static Properties readConfig() {
 		try (InputStream input = new FileInputStream(configPath)) {
 
 			Properties prop = new Properties();
@@ -38,7 +29,11 @@ public class Config {
 		return null;
 	}
 
-	public int getPort() {
-		return port;
+	public static int getPort() {
+		return Integer.parseInt(props.getProperty("port"));
+	}
+	
+	public static String getDataDir() {
+		return props.getProperty("data_dir");
 	}
 }

@@ -1,6 +1,7 @@
 package com.arkinem.jobrep.rmiserver;
 
 import com.arkinem.jobrep.utils.Config;
+import com.arkinem.jobrep.utils.TextFile;
 
 public class StartServer {
 	/**
@@ -11,7 +12,11 @@ public class StartServer {
 	public static void main(String[] args) {
 		System.out.println("Started");
 
-		Config config = new Config();
-		System.out.println(config.getPort());
+		System.out.println("Port: " + Config.getPort());
+		
+		TextFile t = new TextFile();
+		
+		t.write("hehe");
+		t.read();
 	}
 }
