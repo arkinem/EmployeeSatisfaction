@@ -6,18 +6,26 @@ import javax.swing.JLabel;
 
 import com.arkinem.jobrep.client.Constants;
 
-public class HeaderLabel extends JLabel {
+public class QuestionLabel extends JLabel {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -9212206095564704217L;
-	private Font font = new Font("Roboto", Font.BOLD, 36);
+	private Font font = new Font("Roboto", Font.BOLD, 18);
 
-	public HeaderLabel(String text) {
-		setBounds(150, 50, 400, 80);
+	public QuestionLabel() {
+		setStyle();
+	}
+
+	public QuestionLabel(String text) {
+		setStyle();
+		setText(text);
+	}
+	
+	private void setStyle() {
+		setBounds(28, 30, 600, 40);
 		setFont(font);
 		setForeground(Constants.lightFontColor);
-		setText(text);
 	}
 }

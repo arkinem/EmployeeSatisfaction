@@ -1,8 +1,9 @@
-<q><id>8b2a6450-a2f0-4a9c-85d2-de0478052aa8</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>a6b60a20-f2c5-4f1f-b98f-c3c80573c2d5</id>Odpowiedz cost1</a>
-<a><id>57dd9960-ed47-48bc-8e4f-40ffe0c50a15</id>Odpowiedz cost2</a>
-<a><id>90d08455-dc25-47af-8496-54f807282cd0</id>Odpowiedz cost3</a>
-<a><id>b10b448c-5f03-4edb-8d03-57eabd45f2f9</id>Odpowiedz cost4</a>
+<q><id>8b2a6450-a2f0-4a9c-85d2-de0478052aa8</id>How long have you been working in our company?</q>
+<a><id>a6b60a20-f2c5-4f1f-b98f-c3c80573c2d5</id>Less than 1 year</a>
+<a><id>57dd9960-ed47-48bc-8e4f-40ffe0c50a15</id>1-3 years</a>
+<a><id>90d08455-dc25-47af-8496-54f807282cd0</id>3-5 years</a>
+<a><id>b10b448c-5f03-4edb-8d03-57eabd45f2f9</id>5-10 years</a>
+<a><id>6b4e4721-0c1b-4e4a-afe4-9ea4683ef549</id>Over 10 years</a>
 <q><id>81de2939-caec-4f92-8ba2-b8ae8a0499c6</id>Pytanie numer 1 cos tam cos tam</q>
 <a><id>827dcc42-71bc-486b-9d12-1c7f7396dfe5</id>Odpowiedz cost1</a>
 <a><id>7664bb1d-31e4-4020-add4-4ec51ea5fbb3</id>Odpowiedz cost2</a>
