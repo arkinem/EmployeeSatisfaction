@@ -208,3 +208,8 @@
 <a><id>899810e5-f29b-49e8-914e-2b46f585a119</id>Odpowiedz B</a>
 <a><id>47ae24b5-db97-4908-a868-677ff6025e7a</id>Odpowiedz C</a>
 <a><id>45985036-20fc-4b6e-94a5-006dd007b366</id>Odpowiedz D</a>
+<q><id>43811ff3-273f-45c7-91ff-11533ab41353</id>Pytanie numer 1 cos tam cos tam</q>
+<a><id>9e84e37f-8cba-4901-9ec1-327cbb027c39</id>Odpowiedz A</a>
+<a><id>082b2c2a-3d0c-4101-93a3-6b75cc439ecd</id>Odpowiedz B</a>
+<a><id>ca350d0a-7fd2-46d7-a351-c6ef3f6ccf47</id>Odpowiedz C</a>
+<a><id>37a947a6-8a98-4b15-b24d-925f9f3e9fa8</id>Odpowiedz D</a>

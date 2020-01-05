@@ -1,85 +1,18 @@
 package com.arkinem.jobrep.utils;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-import java.util.function.Consumer;
-import java.util.stream.Stream;
 
 import com.arkinem.jobrep.rmiinterface.Answer;
 import com.arkinem.jobrep.rmiinterface.Question;
 
-public class TextFileDb {
-	private static final String currentDir = System.getProperty("user.dir");
-	private static final Path dataDirPath = Paths.get(currentDir, Config.getDataDir());
-	private static Path filePath;
-	private static String resultString = "";
 
+public final class FilestringParser {
 	public enum TokenType {
 		ID, QUESTION, ANSWER
 	}
-
-	public TextFileDb(String name) {
-		filePath = Paths.get(dataDirPath.toString(), name + ".txt");
-		this.createFileIfNotExist(filePath);
-
-	}
-
-	private void createFileIfNotExist(Path path) {
-		if (Files.notExists(path)) {
-			File yourFile = new File(path.toString());
-			yourFile.getParentFile().mkdirs();
-			try {
-				yourFile.createNewFile();
-				System.out.println("File created");
-				System.out.println(path.toString());
-			} catch (IOException e) {
-				System.out.println("Failed to create a new file");
-				System.out.println(path.toString());
-				e.printStackTrace();
-			}
-		}
-	}
-
-	public void append(List<String> data) {
-		try {
-			Files.write(filePath, data, StandardCharsets.UTF_8, StandardOpenOption.APPEND);
-		} catch (IOException e) {
-			System.out.println("Filed to write to the file");
-			System.out.println(filePath.toString());
-			e.printStackTrace();
-		}
-	}
-
-	public String readAll() {
-		resultString = "";
-		try (Stream<String> stream = Files.lines(filePath)) {
-			stream.forEach(forEachRow);
-		} catch (IOException e) {
-			System.out.println("Filed to read from the file");
-			System.out.println(filePath.toString());
-			e.printStackTrace();
-		}
-
-		return resultString;
-	}
-
-	Consumer<String> forEachRow = s -> {
-//		System.out.println(s);
-		resultString += s;
-	};
-
-	public void c() {
-		System.out.println(resultString);
-	}
-
+	
 	public static List<String> convertQuestionToFilestring(Question question) {
 		List<String> result = new ArrayList<String>();
 		String questionId = tokenize(question.getId().toString(), TokenType.ID);
@@ -94,7 +27,7 @@ public class TextFileDb {
 
 		return result;
 	}
-
+	
 	public static List<Question> convertFilestringToQuestions(String filestring) {
 		List<Question> result = new ArrayList<Question>();
 
@@ -123,7 +56,7 @@ public class TextFileDb {
 		System.out.println(result.size());
 		return result;
 	}
-
+	
 	private static String tokenize(String text, TokenType type) {
 		String token = "";
 
@@ -143,5 +76,4 @@ public class TextFileDb {
 
 		return "<" + token + ">" + text + "</" + token + ">";
 	}
-
 }
