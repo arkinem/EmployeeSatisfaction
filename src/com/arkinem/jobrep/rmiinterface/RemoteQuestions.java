@@ -2,14 +2,15 @@ package com.arkinem.jobrep.rmiinterface;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-import java.util.Vector;
+import java.util.List;
+import java.util.UUID;
 
 /**
  * RMI interface to enable to retrieve questions from the server and to submit
  * data to the server.
  * 
  * @author Marc Conrad
- *
+ * Modified by arkinem
  */
 public interface RemoteQuestions extends Remote {
 	/**
@@ -36,7 +37,7 @@ public interface RemoteQuestions extends Remote {
 	 * @param answer the answer given to this question.
 	 * @throws RemoteException
 	 */
-	void submitAnswer(int i, String answer) throws RemoteException;
+	public void submitAnswer(UUID answerId) throws RemoteException;
 
 	/**
 	 * Returns the answers to the questions given.
@@ -44,5 +45,5 @@ public interface RemoteQuestions extends Remote {
 	 * @return answers to the questions.
 	 * @throws RemoteException
 	 */
-	public Vector<Question> getData() throws RemoteException;
+	public List<Question> getData() throws RemoteException;
 }

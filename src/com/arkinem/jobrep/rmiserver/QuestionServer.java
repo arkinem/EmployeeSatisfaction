@@ -1,0 +1,66 @@
+package com.arkinem.jobrep.rmiserver;
+
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+import java.util.Arrays;
+import java.util.List;
+import java.util.UUID;
+import java.util.Vector;
+import java.util.stream.Collectors;
+
+import com.arkinem.jobrep.repository.QuestionsRepository;
+import com.arkinem.jobrep.repository.ResultsRepository;
+import  com.arkinem.jobrep.rmiinterface.Question;
+import  com.arkinem.jobrep.rmiinterface.RemoteQuestions;
+
+public class QuestionServer 
+extends UnicastRemoteObject implements com.arkinem.jobrep.rmiinterface.RemoteQuestions{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2834956567289941412L;
+	private QuestionsRepository questions;
+	private ResultsRepository results;
+
+	QuestionServer() throws RemoteException {
+		super();
+		System.out.println("QuestionServer Created");
+		questions = new QuestionsRepository();
+		results = new ResultsRepository();
+	}
+
+	/**
+	 * Implementation of remote interface method. 
+	 */
+	@Override
+	public int getNumberOfQuestions() throws RemoteException {
+		return questions.getAllQuestions().size();
+	}
+	/**
+	 * Implementation of remote interface method. 
+	 */
+	@Override
+	public Question getQuestion(int i) throws RemoteException {
+		return questions.getAllQuestions().get(i);
+	}
+	/**
+	 * Implementation of remote interface method. 
+	 */	
+	@Override
+	public void submitAnswer(UUID answerId) throws RemoteException {
+		results.submitResult(answerId);
+	}
+	/**
+	 * Implementation of remote interface method. 
+	 */	
+	@Override
+	public List<Question> getData() { 
+		
+		Arrays.stream(results.getResults().toArray())
+	      .collect(Collectors.groupingBy(s -> s))
+	      .forEach((k, v) -> System.out.println(k+" "+v.size()));
+		
+		return null;
+	}
+
+}
