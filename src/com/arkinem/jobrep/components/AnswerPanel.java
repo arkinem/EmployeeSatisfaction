@@ -16,14 +16,18 @@ public class AnswerPanel extends JPanel {
 	private AnswerLabel answerText = new AnswerLabel();
 	private UUID answerId;
 
+	public AnswerPanel() {
+		setStyle();
+	}
+	
+	public AnswerPanel(UUID answerId) {
+		this.answerId = answerId;
+		setStyle();
+	}
+	
 	public AnswerPanel(UUID answerId, String text) {
 		this.answerId = answerId;
 		answerText.setText(text);
-		setStyle();
-	}
-
-	public AnswerPanel(UUID answerId) {
-		this.answerId = answerId;
 		setStyle();
 	}
 
