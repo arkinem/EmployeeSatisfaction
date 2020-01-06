@@ -41,7 +41,7 @@ public class JobrepGUI extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource().equals(startButton)) {
 			startScreen.setVisible(false);
-//			questionsScreen.setVisible(true);
+			questionsScreen.setVisible(true);
 //			questionsScreen.setBackground(Color.pink);
 			getContentPane().add(questionsScreen);
 			questionsScreen.repaint();
@@ -51,9 +51,13 @@ public class JobrepGUI extends JFrame implements ActionListener {
 
 			List<Answer> answers = questionnaire.getOptions(0);
 
+			repaint();
 			for (int j = 0; j < answers.size(); j++) {
 				Answer answer = answers.get(j);
+
+				System.out.println(answer.getAnswerText());
 				AnswerPanel answerPanel = new AnswerPanel(answer.getId(), answer.getAnswerText());
+				questionsScreen.add(answerPanel);
 				answerPanels.add(answerPanel);
 				Dimension panelSize = answerPanel.getSize();
 				answerPanel.setBounds(25, j * (panelSize.height + 5) + 90, panelSize.width, panelSize.height);
@@ -63,17 +67,24 @@ public class JobrepGUI extends JFrame implements ActionListener {
 
 						questionnaire.submitAnswer(source.getAnswerId());
 						
-						System.out.println(questionnaire.numberOfQuestions() +" "+ questionIndex);
 
 						if (questionnaire.numberOfQuestions() > questionIndex + 1) {
 							questionIndex++;
 							test();
+						} else {
+							questionsScreen.setVisible(false);
+							startScreen.setVisible(true);
+							questionIndex = 0;
+							for(AnswerPanel panel : answerPanels) {
+								questionsScreen.remove(panel);
+							}
+							answerPanels = new ArrayList<AnswerPanel>();
+							repaint();
 						}
 
-						System.out.println(source.getAnswerId());
 					}
 				});
-				questionsScreen.add(answerPanel);
+				
 			}
 
 		}
@@ -91,9 +102,11 @@ public class JobrepGUI extends JFrame implements ActionListener {
 
 		for (int i = 0; i < answers.size(); i++) {
 			Answer answer = answers.get(i);
+			System.out.println(answer.getAnswerText());
 			AnswerPanel answerPanel = answerPanels.get(i);
 			answerPanel.setText(answer.getAnswerText());
 			answerPanel.setAnswerId(answer.getId());
+			answerPanel.repaint();
 //			answerPanel.removeMouseListeners();
 //			answerPanel.addMouseListener(new MouseAdapter() {
 //				public void mousePressed(MouseEvent me) {

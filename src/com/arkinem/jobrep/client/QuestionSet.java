@@ -66,6 +66,7 @@ public class QuestionSet {
 	 * @return an array of options. 
 	 */
 	public List<Answer> getOptions(int i) { 
+		System.out.println(i);
 		try {
 			return myQuestions.getQuestion(i).getAnswers();
 		} catch (RemoteException e) {
