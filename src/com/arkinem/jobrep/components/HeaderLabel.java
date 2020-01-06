@@ -3,6 +3,7 @@ package com.arkinem.jobrep.components;
 import java.awt.Font;
 
 import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 
 import com.arkinem.jobrep.client.Constants;
 
@@ -19,5 +20,7 @@ public class HeaderLabel extends JLabel {
 		setFont(font);
 		setForeground(Constants.lightFontColor);
 		setText(text);
+		setHorizontalAlignment(SwingConstants.CENTER);
+		setVerticalAlignment(SwingConstants.CENTER);
 	}
 }

@@ -1,4 +1,4 @@
-package com.arkinem.jobrep.client;
+package com.arkinem.jobrep.screens;
 
 import java.awt.CardLayout;
 import java.awt.Dimension;
@@ -9,8 +9,8 @@ import java.util.List;
 
 import javax.swing.JPanel;
 
+import com.arkinem.jobrep.client.QuestionSet;
 import com.arkinem.jobrep.components.AnswerPanel;
-import com.arkinem.jobrep.components.BaseScreen;
 import com.arkinem.jobrep.components.QuestionLabel;
 import com.arkinem.jobrep.rmiinterface.Answer;
 

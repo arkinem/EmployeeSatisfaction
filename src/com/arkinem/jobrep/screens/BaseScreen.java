@@ -1,4 +1,4 @@
-package com.arkinem.jobrep.components;
+package com.arkinem.jobrep.screens;
 
 import javax.swing.JPanel;
 

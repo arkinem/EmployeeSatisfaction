@@ -1,4 +1,4 @@
-package com.arkinem.jobrep.client;
+package com.arkinem.jobrep.screens;
 
 import java.awt.CardLayout;
 import java.awt.Font;
@@ -8,7 +8,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 
 import com.arkinem.jobrep.components.SecondaryButton;
-import com.arkinem.jobrep.components.BaseScreen;
 import com.arkinem.jobrep.components.HeaderLabel;
 import com.arkinem.jobrep.components.PrimaryButton;
 
@@ -43,13 +42,15 @@ public class StartScreen extends BaseScreen implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+
+		CardLayout layout = (CardLayout) container.getLayout();
+		
 		if (e.getSource().equals(startButton)) {
-			CardLayout layout = (CardLayout) container.getLayout();
-			layout.next(container);
+			layout.show(container, "questionsScreen");
 		}
 
 		if (e.getSource().equals(adminButton)) {
-
+			layout.show(container, "passwordScreen");
 		}
 	}
 

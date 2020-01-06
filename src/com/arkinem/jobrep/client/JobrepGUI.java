@@ -4,22 +4,21 @@ import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import javax.swing.*;
 
+import com.arkinem.jobrep.screens.PasswordScreen;
+import com.arkinem.jobrep.screens.QuestionsScreen;
+import com.arkinem.jobrep.screens.StartScreen;
+
 public class JobrepGUI extends JPanel {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 668891012501699891L;
-	private QuestionsScreen questionsScreen;
-	private StartScreen startScreen;
-	private JPanel panels;
 
 	public void init(JFrame frame) {
-		setSize(700, 480);
 		frame.setSize(700, 480);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		// center window
-		frame.setLocationRelativeTo(null);
+		frame.setLocationRelativeTo(null);	// center window
 		frame.setResizable(false);
 		frame.getContentPane().add(setUpPanels(), BorderLayout.CENTER);
 		frame.setVisible(true);
@@ -27,13 +26,15 @@ public class JobrepGUI extends JPanel {
 	
 	private JPanel setUpPanels() {
 		CardLayout layout = new CardLayout();
-		panels = new JPanel(layout);
+		JPanel panels = new JPanel(layout);
 		
-		startScreen = new StartScreen(panels);
-		questionsScreen = new QuestionsScreen(panels);
+		StartScreen startScreen = new StartScreen(panels);
+		QuestionsScreen questionsScreen = new QuestionsScreen(panels);
+		PasswordScreen passwordScreen = new PasswordScreen(panels);
 	
-		panels.add(startScreen);
-		panels.add(questionsScreen);
+		panels.add(startScreen, "startScreen");
+		panels.add(questionsScreen, "questionsScreen");
+		panels.add(passwordScreen, "passwordScreen");
 		
 		return panels;
 	}
