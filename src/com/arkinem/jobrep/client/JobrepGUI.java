@@ -12,8 +12,7 @@ public class JobrepGUI extends JPanel {
 	private static final long serialVersionUID = 668891012501699891L;
 	private QuestionsScreen questionsScreen;
 	private StartScreen startScreen;
-	QuestionSet questionnaire = new QuestionSet();
-	JPanel panels;
+	private JPanel panels;
 
 	public void init(JFrame frame) {
 		setSize(700, 480);

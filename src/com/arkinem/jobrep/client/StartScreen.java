@@ -21,7 +21,7 @@ public class StartScreen extends BaseScreen implements ActionListener {
 	private PrimaryButton startButton = new PrimaryButton("Start Questionnaire");
 	private SecondaryButton adminButton = new SecondaryButton("Admin");
 	private HeaderLabel headerLabel = new HeaderLabel("Employee satisfaction");
-	QuestionSet questionnaire = new QuestionSet();
+	private QuestionSet questionnaire = new QuestionSet();
 	private JPanel container;
 
 	public StartScreen(JPanel container) {
