@@ -25,7 +25,7 @@ public class QuestionSet {
 	public QuestionSet() {
 		super();
 		try {
-			myQuestions = (RemoteQuestions) Naming.lookup("rmi://localhost/ArkinemQuestionService");
+			myQuestions = (RemoteQuestions) Naming.lookup("rmi://localhost/QuestionService");
 		} catch (Exception e) {
 			System.out.println("A problem occured: " + e.toString());
 			e.printStackTrace();

@@ -2,10 +2,10 @@ package com.arkinem.jobrep.rmiserver;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import com.arkinem.jobrep.rmiinterface.Authentication;
+import com.arkinem.jobrep.rmiinterface.RemoteAuthentication;
 import com.arkinem.jobrep.utils.Config;
 
-public class AuthenticationServer extends UnicastRemoteObject implements Authentication {
+public class AuthenticationServer extends UnicastRemoteObject implements RemoteAuthentication {
 	/**
 	 * 
 	 */

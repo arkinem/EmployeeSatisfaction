@@ -3,7 +3,7 @@ package com.arkinem.jobrep.rmiinterface;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-public interface Authentication extends Remote {
+public interface RemoteAuthentication extends Remote {
 	/**
 	 * Checks if provided password is the same as the one stored in config.
 	 * 
