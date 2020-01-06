@@ -15,4 +15,6 @@ public final class Constants {
 	 public static final Color rolloverSecondaryColor = new Color(26,32,35);
 	 
 	 public static final Color lightFontColor = Color.white;
+	 
+	 public static final Color errorColor = new Color(244,67,54);
 }
