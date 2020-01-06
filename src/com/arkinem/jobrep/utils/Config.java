@@ -36,4 +36,8 @@ public final class Config {
 	public static String getDataDir() {
 		return props.getProperty("data_dir");
 	}
+	
+	public static String getPassword() {
+		return props.getProperty("admin_password");
+	}
 }
