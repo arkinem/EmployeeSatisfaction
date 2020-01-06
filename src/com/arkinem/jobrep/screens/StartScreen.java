@@ -42,7 +42,6 @@ public class StartScreen extends BaseScreen implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-
 		CardLayout layout = (CardLayout) container.getLayout();
 		
 		if (e.getSource().equals(startButton)) {

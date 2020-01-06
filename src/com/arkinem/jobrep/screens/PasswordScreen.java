@@ -1,7 +1,6 @@
 package com.arkinem.jobrep.screens;
 
 import java.awt.CardLayout;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -34,12 +33,12 @@ public class PasswordScreen extends BaseScreen implements ActionListener {
 
 		passwordField.setBounds(200, 160, 300, 40);
 
-		signInButton.setBounds(360, 280, 100, 40);
-		signInButton.setFont(new Font("Roboto", Font.BOLD, 16));
+		signInButton.setBounds(360, 260, 100, 40);
+		signInButton.setFontSize(16);
 		signInButton.addActionListener(this);
 
-		backButton.setBounds(240, 280, 100, 40);
-		backButton.setFont(new Font("Roboto", Font.BOLD, 16));
+		backButton.setBounds(240, 260, 100, 40);
+		backButton.setFontSize(16);
 		backButton.addActionListener(this);
 
 		errorLabel.setBounds(100, 350, 500, 40);

@@ -39,4 +39,8 @@ public class SecondaryButton extends JButton {
             }
         });
     }
+    
+    public void setFontSize(int size) {
+   	 setFont(new Font("Roboto", Font.BOLD, size));
+   }
 }
