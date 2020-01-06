@@ -56,8 +56,8 @@ public class ResultsScreen extends BaseScreen implements ActionListener {
 		yAxesArray.add(yAxes);
 		
 		JSONObject scales = new JSONObject();
-		scales.put("xAxes", xAxesArray)
-		scales.put("yAxes", yAxesArray)	
+		scales.put("xAxes", xAxesArray);
+		scales.put("yAxes", yAxesArray);
 				
 		JSONObject options = new JSONObject();
 		options.put("legend", legend);
