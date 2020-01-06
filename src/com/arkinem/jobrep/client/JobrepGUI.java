@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import javax.swing.*;
 
+import com.arkinem.jobrep.screens.AdminScreen;
 import com.arkinem.jobrep.screens.PasswordScreen;
 import com.arkinem.jobrep.screens.QuestionsScreen;
 import com.arkinem.jobrep.screens.StartScreen;
@@ -31,10 +32,12 @@ public class JobrepGUI extends JPanel {
 		StartScreen startScreen = new StartScreen(panels);
 		QuestionsScreen questionsScreen = new QuestionsScreen(panels);
 		PasswordScreen passwordScreen = new PasswordScreen(panels);
+		AdminScreen adminScreen = new AdminScreen(panels);
 	
 		panels.add(startScreen, "startScreen");
 		panels.add(questionsScreen, "questionsScreen");
 		panels.add(passwordScreen, "passwordScreen");
+		panels.add(adminScreen, "adminScreen");
 		
 		return panels;
 	}
