@@ -24,7 +24,7 @@ public class PrimaryButton extends JButton {
 
         setBackground(Constants.primaryColor);
         setForeground(Constants.lightFontColor);
-        setFont(new Font("Tahoma", Font.BOLD, 12));
+        setFont(new Font("Roboto", Font.BOLD, 12));
         setText(text);
 
         addChangeListener(new ChangeListener() {
