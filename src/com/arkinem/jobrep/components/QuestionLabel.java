@@ -22,7 +22,7 @@ public class QuestionLabel extends JLabel {
 		setStyle();
 		setText(text);
 	}
-	
+
 	private void setStyle() {
 		setBounds(28, 30, 600, 40);
 		setFont(font);

@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,21 +40,18 @@ public class JobrepGUI extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource().equals(startButton)) {
 			startScreen.setVisible(false);
-			questionsScreen.setVisible(true);
-//			questionsScreen.setBackground(Color.pink);
-			getContentPane().add(questionsScreen);
-			questionsScreen.repaint();
 
 			questionLabel.setText(questionnaire.getQuestion(0));
 			questionsScreen.add(questionLabel);
+			questionsScreen.setVisible(true);
+			getContentPane().add(questionsScreen);
+			questionsScreen.repaint();
 
 			List<Answer> answers = questionnaire.getOptions(0);
 
 			repaint();
 			for (int j = 0; j < answers.size(); j++) {
 				Answer answer = answers.get(j);
-
-				System.out.println(answer.getAnswerText());
 				AnswerPanel answerPanel = new AnswerPanel(answer.getId(), answer.getAnswerText());
 				questionsScreen.add(answerPanel);
 				answerPanels.add(answerPanel);
@@ -66,7 +62,6 @@ public class JobrepGUI extends JFrame implements ActionListener {
 						AnswerPanel source = (AnswerPanel) me.getSource();
 
 						questionnaire.submitAnswer(source.getAnswerId());
-						
 
 						if (questionnaire.numberOfQuestions() > questionIndex + 1) {
 							questionIndex++;
@@ -75,7 +70,7 @@ public class JobrepGUI extends JFrame implements ActionListener {
 							questionsScreen.setVisible(false);
 							startScreen.setVisible(true);
 							questionIndex = 0;
-							for(AnswerPanel panel : answerPanels) {
+							for (AnswerPanel panel : answerPanels) {
 								questionsScreen.remove(panel);
 							}
 							answerPanels = new ArrayList<AnswerPanel>();
@@ -84,7 +79,7 @@ public class JobrepGUI extends JFrame implements ActionListener {
 
 					}
 				});
-				
+
 			}
 
 		}
@@ -95,28 +90,18 @@ public class JobrepGUI extends JFrame implements ActionListener {
 	}
 
 	private void test() {
-//		questionsScreen.removeAll();
 		questionLabel.setText(questionnaire.getQuestion(questionIndex));
 
 		List<Answer> answers = questionnaire.getOptions(questionIndex);
 
 		for (int i = 0; i < answers.size(); i++) {
 			Answer answer = answers.get(i);
-			System.out.println(answer.getAnswerText());
 			AnswerPanel answerPanel = answerPanels.get(i);
 			answerPanel.setText(answer.getAnswerText());
 			answerPanel.setAnswerId(answer.getId());
 			answerPanel.repaint();
-//			answerPanel.removeMouseListeners();
-//			answerPanel.addMouseListener(new MouseAdapter() {
-//				public void mousePressed(MouseEvent me) {
-//					AnswerPanel source = (AnswerPanel) me.getSource();
-//
-//					System.out.println(source.getAnswerId());
-//				}
-//			});
 		}
-		
+
 		repaint();
 	}
 
