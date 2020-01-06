@@ -1,6 +1,7 @@
 package com.arkinem.jobrep.components;
 
 import java.awt.GridBagLayout;
+import java.awt.event.MouseListener;
 import java.util.UUID;
 
 import javax.swing.JPanel;
@@ -31,8 +32,19 @@ public class AnswerPanel extends JPanel {
 		answerText.setText(text);
 	}
 	
+	public void setAnswerId(UUID id) {
+		answerId = id;
+	}
+	
 	public UUID getAnswerId() {
 		return answerId;
+	}
+	
+	public void removeMouseListeners() {
+		MouseListener[] mouseListeners = getMouseListeners();
+		for (MouseListener mouseListener : mouseListeners) {
+			removeMouseListener(mouseListener);
+		}
 	}
 	
 	private void setStyle() {

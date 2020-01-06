@@ -6,6 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.*;
@@ -32,8 +34,8 @@ public class JobrepGUI extends JFrame implements ActionListener {
 	private BaseScreen startScreen = new BaseScreen();
 	private BaseScreen questionsScreen = new BaseScreen();
 	QuestionSet questionnaire = new QuestionSet();
-
-	
+	int questionIndex = 0;
+	private List<AnswerPanel> answerPanels = new ArrayList<AnswerPanel>();
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -44,29 +46,34 @@ public class JobrepGUI extends JFrame implements ActionListener {
 			getContentPane().add(questionsScreen);
 			questionsScreen.repaint();
 
-			int noOfQuestions = questionnaire.numberOfQuestions();
+			questionLabel.setText(questionnaire.getQuestion(0));
+			questionsScreen.add(questionLabel);
 
-//			for (int i = 0; i < noOfQuestions; i++) {
-			for (int i = 0; i < 1; i++) {
-				questionLabel.setText(questionnaire.getQuestion(i));
-				questionsScreen.add(questionLabel);
+			List<Answer> answers = questionnaire.getOptions(0);
 
-				List<Answer> answers = questionnaire.getOptions(i);
+			for (int j = 0; j < answers.size(); j++) {
+				Answer answer = answers.get(j);
+				AnswerPanel answerPanel = new AnswerPanel(answer.getId(), answer.getAnswerText());
+				answerPanels.add(answerPanel);
+				Dimension panelSize = answerPanel.getSize();
+				answerPanel.setBounds(25, j * (panelSize.height + 5) + 90, panelSize.width, panelSize.height);
+				answerPanel.addMouseListener(new MouseAdapter() {
+					public void mousePressed(MouseEvent me) {
+						AnswerPanel source = (AnswerPanel) me.getSource();
 
-				for (int j = 0; j < answers.size(); j++) {
-					Answer answer = answers.get(j);
-					AnswerPanel answerPanel = new AnswerPanel(answer.getId(), answer.getAnswerText());
-					Dimension panelSize = answerPanel.getSize();
-					answerPanel.setBounds(25, j * (panelSize.height + 5) + 90, panelSize.width, panelSize.height);
-					answerPanel.addMouseListener(new MouseAdapter() { 
-				          public void mousePressed(MouseEvent me) {
-				        	  AnswerPanel source =(AnswerPanel) me.getSource();
-				        	  
-				              System.out.println(source.getAnswerId()); 
-				            } 
-				          }); 
-					questionsScreen.add(answerPanel);
-				}
+						questionnaire.submitAnswer(source.getAnswerId());
+						
+						System.out.println(questionnaire.numberOfQuestions() +" "+ questionIndex);
+
+						if (questionnaire.numberOfQuestions() > questionIndex + 1) {
+							questionIndex++;
+							test();
+						}
+
+						System.out.println(source.getAnswerId());
+					}
+				});
+				questionsScreen.add(answerPanel);
 			}
 
 		}
@@ -74,6 +81,30 @@ public class JobrepGUI extends JFrame implements ActionListener {
 		if (e.getSource().equals(adminButton)) {
 
 		}
+	}
+
+	private void test() {
+//		questionsScreen.removeAll();
+		questionLabel.setText(questionnaire.getQuestion(questionIndex));
+
+		List<Answer> answers = questionnaire.getOptions(questionIndex);
+
+		for (int i = 0; i < answers.size(); i++) {
+			Answer answer = answers.get(i);
+			AnswerPanel answerPanel = answerPanels.get(i);
+			answerPanel.setText(answer.getAnswerText());
+			answerPanel.setAnswerId(answer.getId());
+//			answerPanel.removeMouseListeners();
+//			answerPanel.addMouseListener(new MouseAdapter() {
+//				public void mousePressed(MouseEvent me) {
+//					AnswerPanel source = (AnswerPanel) me.getSource();
+//
+//					System.out.println(source.getAnswerId());
+//				}
+//			});
+		}
+		
+		repaint();
 	}
 
 	private JobrepGUI() {
@@ -101,16 +132,6 @@ public class JobrepGUI extends JFrame implements ActionListener {
 	}
 
 	public static void main(String[] args) {
-//		QuestionSet questionnaire = new QuestionSet(); 
-//		int number = questionnaire.numberOfQuestions();
-//		System.out.println(number);
-//		
-//		long prevTime = System.currentTimeMillis();
-//		for (int i = 0; i < number; i++) {
-//String question = questionnaire.getQuestion(i);
-//			System.out.println(question + " " + (System.currentTimeMillis() - prevTime) + "ms");
-//			prevTime = System.currentTimeMillis();
-//		}
 		JobrepGUI gui = new JobrepGUI();
 		gui.setVisible(true);
 	}

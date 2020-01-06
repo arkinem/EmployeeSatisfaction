@@ -4,213 +4,39 @@
 <a><id>90d08455-dc25-47af-8496-54f807282cd0</id>3-5 years</a>
 <a><id>b10b448c-5f03-4edb-8d03-57eabd45f2f9</id>5-10 years</a>
 <a><id>6b4e4721-0c1b-4e4a-afe4-9ea4683ef549</id>Over 10 years</a>
-<q><id>81de2939-caec-4f92-8ba2-b8ae8a0499c6</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>827dcc42-71bc-486b-9d12-1c7f7396dfe5</id>Odpowiedz cost1</a>
-<a><id>7664bb1d-31e4-4020-add4-4ec51ea5fbb3</id>Odpowiedz cost2</a>
-<a><id>4e67d8e6-b451-4752-adf3-e51c736a973e</id>Odpowiedz cost3</a>
-<a><id>2e1aaac6-e1e3-4393-8101-8b9c0a36fc13</id>Odpowiedz cost4</a>
-<q><id>0e0d2353-5be4-4d1f-be85-5d2f1d3c262f</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>28b54391-8252-4e47-bd69-798fd167d568</id>Odpowiedz cost1</a>
-<a><id>6b0cbc0a-86fe-47ce-a986-ca7fccbf3e7f</id>Odpowiedz cost2</a>
-<a><id>77d6ab72-b82c-4eae-86eb-72063c410d8f</id>Odpowiedz cost3</a>
-<a><id>b6f990b2-9f23-41be-bbf6-fa05da059c28</id>Odpowiedz cost4</a>
-<q><id>a1b3dd0b-73cf-43d1-9d53-0e687f72a661</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>03dfc689-af40-44cc-a0c2-0b0a50a3d3a6</id>Odpowiedz cost1</a>
-<a><id>60a29ef5-3b0f-4f46-a1b1-b393d7e9b2b2</id>Odpowiedz cost2</a>
-<a><id>775a8b9c-982c-4d7d-90ad-8db586aed692</id>Odpowiedz cost3</a>
-<a><id>7ac93e1c-7297-4b63-a18b-aba1957161f1</id>Odpowiedz cost4</a>
-<q><id>3cc32fab-9803-42aa-bbec-2babd51ac210</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>1c2f3185-85f3-4c1c-91c7-033458b19e46</id>Odpowiedz cost1</a>
-<a><id>0f3c2288-5a92-4f81-9f6d-c93b8fb71db9</id>Odpowiedz cost2</a>
-<a><id>4d128ded-c073-4a66-aa44-bfa94428c173</id>Odpowiedz cost3</a>
-<a><id>f49649f4-4619-4928-89e5-27b724548df0</id>Odpowiedz cost4</a>
-<q><id>dbe29245-a1b7-4e5b-87ca-69103b15c7fe</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>a88cc4fd-0141-4eb2-9a3e-2dc0e1413311</id>Odpowiedz cost1</a>
-<a><id>d5bb1088-0b97-4cee-bde9-aef873aa0bac</id>Odpowiedz cost2</a>
-<a><id>0bc23f22-9974-4acc-bbee-71e0da167bf8</id>Odpowiedz cost3</a>
-<a><id>779f953b-879f-4294-b147-ad9097e45c9a</id>Odpowiedz cost4</a>
-<q><id>4b368e3e-a25d-47f0-b773-e8266bb10561</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>4473219c-50e1-41f7-80c4-4c789cd8c729</id>Odpowiedz cost1</a>
-<a><id>0363464c-9c09-40ab-9105-40e7ba6aa56b</id>Odpowiedz cost2</a>
-<a><id>d17c8723-72a4-48a6-8d60-3b017c9b26ec</id>Odpowiedz cost3</a>
-<a><id>598f4148-48d1-4883-93c9-65a4e2fc06e4</id>Odpowiedz cost4</a>
-<q><id>4a8a06dd-e824-4a4e-9965-718f00213ece</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>2176676f-ae04-4a95-9a1f-bd0915f98ded</id>Odpowiedz cost1</a>
-<a><id>48ada790-fb00-4e9e-bd26-62101dc4cc9c</id>Odpowiedz cost2</a>
-<a><id>b515d092-dd56-4048-ae8a-324da89ed02c</id>Odpowiedz cost3</a>
-<a><id>3c1f5838-57cc-48ba-92ae-fdf90f30a4ea</id>Odpowiedz cost4</a>
-<q><id>b6e63e93-151f-4c22-9a68-9d14719389c4</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>9b5bfca8-a7e9-4229-8c25-08c032a64f51</id>Odpowiedz cost1</a>
-<a><id>cca33532-1b53-4e07-8b98-566bf133fa6c</id>Odpowiedz cost2</a>
-<a><id>46665c4c-219d-4c9d-9acb-6dbcf955e7d1</id>Odpowiedz cost3</a>
-<a><id>442b6e99-de96-427b-b24f-c6bcbf3645df</id>Odpowiedz cost4</a>
-<q><id>da24e185-5086-466b-9ac5-6ee00aa0dd4d</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>6cba7fdb-4692-4265-8830-bc546e9e90f7</id>Odpowiedz cost1</a>
-<a><id>974af13e-a29c-4a5b-8b46-49003421a249</id>Odpowiedz cost2</a>
-<a><id>a47a5bc5-9f0c-43e9-b18d-ccc91aa4447b</id>Odpowiedz cost3</a>
-<a><id>211786d5-d75b-45c5-a641-e8575be78c59</id>Odpowiedz cost4</a>
-<q><id>4ae16e39-8b8e-4bee-8446-13cebb15a533</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>67078414-f316-4e39-973c-29da377fe937</id>Odpowiedz cost1</a>
-<a><id>aefbc2c9-8cc2-40db-81d7-512d470e8f9f</id>Odpowiedz cost2</a>
-<a><id>5d5cfd4c-5bdb-4223-b660-2d370b94943d</id>Odpowiedz cost3</a>
-<a><id>59666894-c333-460c-b607-eb67a86ff1b3</id>Odpowiedz cost4</a>
-<q><id>8075a07f-7d66-4af4-a491-15b0ae4a0534</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>c780f13a-51e2-42ef-a09f-e645355171a0</id>Odpowiedz cost1</a>
-<a><id>36234c24-5f47-4141-9117-db324c4b807d</id>Odpowiedz cost2</a>
-<a><id>4160a4b1-bee6-466b-908d-100f5a9582f4</id>Odpowiedz cost3</a>
-<a><id>6fcbe2fa-7f4c-4dee-aee8-463457b79696</id>Odpowiedz cost4</a>
-<q><id>f530e1ac-f0e4-482a-aeb6-70bf49755bae</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>572a5223-4e06-423a-aae5-0bb905c0e028</id>Odpowiedz cost1</a>
-<a><id>e5b91b43-3d32-44c0-a43d-34fff2a47345</id>Odpowiedz cost2</a>
-<a><id>13a2b5e9-8101-4a49-8c6d-a838efb4d55c</id>Odpowiedz cost3</a>
-<a><id>99786060-ea8c-46ab-ae8f-af9518bc3718</id>Odpowiedz cost4</a>
-<q><id>0095987f-9bf3-430d-bc00-094526475059</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>ce98c7e9-5c21-4144-8a8d-82b5dd36529a</id>Odpowiedz cost1</a>
-<a><id>774bd2ca-c8db-413f-9e29-014cc80af8b7</id>Odpowiedz cost2</a>
-<a><id>f19536e5-2fb0-4a52-8541-b8f905b4667c</id>Odpowiedz cost3</a>
-<a><id>383900d0-5f7b-4138-811f-7641e397e60e</id>Odpowiedz cost4</a>
-<q><id>20622cc3-b6ff-4b36-a6d2-9f9276637eae</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>1c5b7246-b766-4041-bb22-26b02c3a8429</id>Odpowiedz cost1</a>
-<a><id>64915052-6cac-4a5c-a51a-d3637525d331</id>Odpowiedz cost2</a>
-<a><id>90d56a49-9476-4379-8ebc-b06162bd247b</id>Odpowiedz cost3</a>
-<a><id>8b120a76-26f3-46d1-990a-fb91ac2e5ae6</id>Odpowiedz cost4</a>
-<q><id>d54802ca-731c-41f8-96b0-bee562cf9520</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>d1173f02-5798-43ea-a049-2485027b2c93</id>Odpowiedz cost1</a>
-<a><id>1dda4e57-4730-45ee-9092-296b0d64cc96</id>Odpowiedz cost2</a>
-<a><id>b2414c5b-d2fb-42db-bcdc-063cf27e6de7</id>Odpowiedz cost3</a>
-<a><id>1a7af119-b4f2-41d0-867f-2021871001d2</id>Odpowiedz cost4</a>
-<q><id>53171ddc-aee1-4c56-9269-551d5266736d</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>26ff02f2-5a52-4a9e-91f1-23fabeff9a7a</id>Odpowiedz cost1</a>
-<a><id>9f09096b-0109-49aa-85b6-7334ba2970c3</id>Odpowiedz cost2</a>
-<a><id>6cee4a5c-92cc-497b-93e0-21e697ef9c79</id>Odpowiedz cost3</a>
-<a><id>5b5ba41a-ad23-49c5-b7e5-ed4ac4d97590</id>Odpowiedz cost4</a>
-<q><id>0b0605ab-62e9-4704-a125-11fe693fd075</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>a1ec1418-57bf-4a73-b29b-ff2c2715f4b3</id>Odpowiedz cost1</a>
-<a><id>d20b48d5-ec50-43ba-92a8-fac490c72853</id>Odpowiedz cost2</a>
-<a><id>39d3cb75-533c-41de-ab4f-5046d5a475f8</id>Odpowiedz cost3</a>
-<a><id>2f60dc4d-82f5-4a2a-9227-49b074afe837</id>Odpowiedz cost4</a>
-<q><id>5986b722-54e5-41b9-8b3f-dd62f64a7237</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>e64e9eca-ea24-44a4-a950-a697390a9601</id>Odpowiedz cost1</a>
-<a><id>c4740f97-ca10-4e6d-8553-fcfee722b310</id>Odpowiedz cost2</a>
-<a><id>830284a4-845b-4f6e-903d-1c7f402e023b</id>Odpowiedz cost3</a>
-<a><id>21d4b9da-18fa-435d-8982-190cc803ff0e</id>Odpowiedz cost4</a>
-<q><id>28b56a37-35b4-42fd-898e-8ffe203c9e22</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>c1e967ba-e0aa-4c06-8698-485ce24ae0af</id>Odpowiedz cost1</a>
-<a><id>28bbfc14-bea7-4416-810f-196fb29f16eb</id>Odpowiedz cost2</a>
-<a><id>0bd9aaf2-6daa-4e54-ad1f-93d2c4a38bbb</id>Odpowiedz cost3</a>
-<a><id>02378259-913a-4a33-9a9c-b3f3774a22c9</id>Odpowiedz cost4</a>
-<q><id>fedbe1d3-6b66-488a-866e-f372574f5955</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>c2540e3a-97e6-4811-92a1-a98a762ecf07</id>Odpowiedz cost1</a>
-<a><id>09266d10-91b2-4587-a288-2656395e6298</id>Odpowiedz cost2</a>
-<a><id>a82ba5a4-0595-469b-b66b-794f0e81af51</id>Odpowiedz cost3</a>
-<a><id>86602147-d6d3-41a9-9e5f-c3ed6ff5b465</id>Odpowiedz cost4</a>
-<q><id>b3f17357-9022-408e-9f43-8545d3b2aaeb</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>42c5bcbd-4198-4bf1-8447-158b533d1671</id>Odpowiedz cost1</a>
-<a><id>0598d10e-50cc-413b-b790-6e24bffad24a</id>Odpowiedz cost2</a>
-<a><id>d07a1261-b2b1-45ed-a1c9-3455cca7408c</id>Odpowiedz cost3</a>
-<a><id>082f6e00-f274-4133-94d3-2a5b3f2b6720</id>Odpowiedz cost4</a>
-<q><id>efe84cfd-fd78-4448-9988-36b87c351b02</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>637fd6e0-d0d9-41ca-aa34-ddf24281a6f3</id>Odpowiedz cost1</a>
-<a><id>8d27afe9-57e7-473e-a402-c24bc26fc6fb</id>Odpowiedz cost2</a>
-<a><id>8324fd4c-0cab-4b5b-806b-de47f4a19b7b</id>Odpowiedz cost3</a>
-<a><id>6d2df2c8-b5d0-4948-8dad-e64dd12b5108</id>Odpowiedz cost4</a>
-<q><id>f79d1dc3-ec14-4bca-9846-49c0f2823560</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>079211b9-e609-4b33-a3f7-efe3eb72204d</id>Odpowiedz cost1</a>
-<a><id>762c1c25-522e-4c27-ab71-b395a256cb6a</id>Odpowiedz cost2</a>
-<a><id>fc0829d5-b504-4ecd-81e2-f3e552cd8d20</id>Odpowiedz cost3</a>
-<a><id>239c809c-ce1e-4ed5-8da7-b52299910287</id>Odpowiedz cost4</a>
-<q><id>0b388b70-2869-41f9-8d4e-e68d1e2eae49</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>54e9e5cf-cee9-49a8-bd28-8e6ea38374a6</id>Odpowiedz cost1</a>
-<a><id>48682f25-2c3b-4b94-a780-349e34e92ab9</id>Odpowiedz cost2</a>
-<a><id>872c37db-6f21-4903-b12e-624bc6bf9889</id>Odpowiedz cost3</a>
-<a><id>c2d87ae0-aa64-46aa-b1e0-aa212f106645</id>Odpowiedz cost4</a>
-<q><id>67035a0d-93b5-4369-b084-7087896f85a0</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>3ba516b0-775d-4ae2-b740-c6dc9b28773e</id>Odpowiedz cost1</a>
-<a><id>0ba30b68-3c58-404e-b6b9-f1faff824244</id>Odpowiedz cost2</a>
-<a><id>ced36f0c-070c-416e-802b-ac20de979fb6</id>Odpowiedz cost3</a>
-<a><id>2fec5783-8e5c-4334-ade5-7a7e55070800</id>Odpowiedz cost4</a>
-<q><id>967ee929-9679-46f7-a79b-fb3a2eb547fd</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>48c2c0c7-a70b-4791-8302-89a43540864c</id>Odpowiedz cost1</a>
-<a><id>5ab1b364-c84c-4320-96d9-46c2ebd0c116</id>Odpowiedz cost2</a>
-<a><id>68a460d6-6e55-436d-bcf6-b45d564a21fa</id>Odpowiedz cost3</a>
-<a><id>c6e8372d-41ab-4c93-911f-35d44316ad98</id>Odpowiedz cost4</a>
-<q><id>cb04faf8-dec2-48f0-b5f2-ef332f409de4</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>65eef5f1-1c1d-4f00-8138-d3fc7d7bf145</id>Odpowiedz cost1</a>
-<a><id>f0b8b542-fd21-43d5-a817-1ce6456f88a9</id>Odpowiedz cost2</a>
-<a><id>4b0b8825-4932-4787-a02b-d1ea3b9088da</id>Odpowiedz cost3</a>
-<a><id>1058c11d-aea5-4483-96e0-4593c709fe87</id>Odpowiedz cost4</a>
-<q><id>89a163a7-d661-4aec-ab7e-c99d7780ee12</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>182cc50c-9010-4cfc-b3e2-ca458d69c5dd</id>Odpowiedz cost1</a>
-<a><id>e5b97f1c-af4b-44c5-886e-1857db24c9fe</id>Odpowiedz cost2</a>
-<a><id>1ecc59b5-819a-4985-9a25-fd91fe778129</id>Odpowiedz cost3</a>
-<a><id>d5e5bd0c-0f78-48e7-b992-2bc14608d80e</id>Odpowiedz cost4</a>
-<q><id>d4da946f-2216-486a-85a3-b9ffd8374fbb</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>6b3f7be5-f3d7-4b44-9e40-9bddc9ec0a8d</id>Odpowiedz cost1</a>
-<a><id>d8ce6191-9162-4410-acc5-6b016597a4da</id>Odpowiedz cost2</a>
-<a><id>0130f948-68dd-4711-8a8b-5b33b9bb398b</id>Odpowiedz cost3</a>
-<a><id>3554e2ba-c91c-4b64-a778-cc2a41d30bcd</id>Odpowiedz cost4</a>
-<q><id>b2d8aabd-e13c-4651-a22c-dd6efc367f56</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>0139c05c-ed8a-4c74-b867-01a8b3f1d01d</id>Odpowiedz cost1</a>
-<a><id>d852255a-ce5d-4aac-b3fd-9073b584a46f</id>Odpowiedz cost2</a>
-<a><id>357b1aff-3e9c-4966-b45c-db5172663148</id>Odpowiedz cost3</a>
-<a><id>f0f44866-7ff0-497c-88ed-512c6b999934</id>Odpowiedz cost4</a>
-<q><id>8a3ef199-58e4-48dd-a9fc-87af835a6e15</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>9cde01f6-8c96-4fa4-b2f0-19c30a260013</id>Odpowiedz cost1</a>
-<a><id>de7987db-e0a3-49fb-ae00-4e16c69d05c7</id>Odpowiedz cost2</a>
-<a><id>0effd6fb-96db-45d6-bc19-a57bb2e4ac99</id>Odpowiedz cost3</a>
-<a><id>7eebcfa3-8305-4473-969a-7c10d06b364a</id>Odpowiedz cost4</a>
-<q><id>67fb130b-f007-41d5-8bfa-d22f1e49a4e6</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>79fb62ae-43e1-4c74-9362-40be74e5dfcb</id>Odpowiedz cost1</a>
-<a><id>6760f5e1-351c-46e3-888a-7aaff8c6ee3a</id>Odpowiedz cost2</a>
-<a><id>09d0585b-5c2f-4a61-b981-f08cc827474f</id>Odpowiedz cost3</a>
-<a><id>712924ba-6587-4b09-a19b-86ee35cd84c7</id>Odpowiedz cost4</a>
-<q><id>88c44ae9-4cbe-495d-9b3e-d2620cf0f609</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>18869ac2-376e-4f25-9d33-7226dfdaf0d4</id>Odpowiedz cost1</a>
-<a><id>8470f2b6-0faf-4a38-a9ad-49f0187da3d9</id>Odpowiedz cost2</a>
-<a><id>36182cf0-7e60-4b76-9208-35d814651454</id>Odpowiedz cost3</a>
-<a><id>7ab8f771-0a42-48b4-a184-9a5d1627ee9e</id>Odpowiedz cost4</a>
-<q><id>7ec64199-3db6-403c-bab9-25c6f17fc90a</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>96c758d4-1c51-439b-9cee-37b38edd1c9c</id>Odpowiedz cost1</a>
-<a><id>daec089f-44a1-43b3-8ff3-e13f292021ce</id>Odpowiedz cost2</a>
-<a><id>88f57935-bd9e-4e0c-8c9d-12dbdc10bc93</id>Odpowiedz cost3</a>
-<a><id>8dc467bd-8490-4071-be59-672ea750d181</id>Odpowiedz cost4</a>
-<q><id>ea78c708-435d-4866-bae7-8b6c56509432</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>aeee87e6-f8df-4585-9ff1-e40ec5ade71b</id>Odpowiedz cost1</a>
-<a><id>cc383914-f714-4409-a8e0-b1db03cdb38e</id>Odpowiedz cost2</a>
-<a><id>b12a16bd-bb24-4bfc-8a8d-168c4b60bd2a</id>Odpowiedz cost3</a>
-<a><id>21e379ab-b36c-4253-9829-317d61d94256</id>Odpowiedz cost4</a>
-<q><id>724667de-4e2d-4e34-a911-f7297e9448d3</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>4dc283ab-4fc1-4492-9f9b-fb925040b717</id>Odpowiedz A</a>
-<a><id>38f85e31-fb26-4997-a2bb-18c024cc088e</id>Odpowiedz B</a>
-<a><id>66d27b26-4a5d-4533-a63d-c3366a1cf711</id>Odpowiedz C</a>
-<a><id>a7a5e236-1983-4e65-8cf0-edc2b3af2beb</id>Odpowiedz D</a>
-<q><id>0f61d2eb-853d-4c6d-876d-d016c6560ac3</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>dc5749a7-d7a5-4401-8cf6-2add8af17cd4</id>Odpowiedz A</a>
-<a><id>85efd8d5-c505-4dfe-84c4-8c940a00ff34</id>Odpowiedz B</a>
-<a><id>e28af1ca-0066-4374-8bc0-f8ac5c116309</id>Odpowiedz C</a>
-<a><id>b9ca8185-7047-40d6-a65d-922a9310b098</id>Odpowiedz D</a>
-<q><id>21730ff0-73ab-4312-aafc-2fe950e5df94</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>43e12769-56e2-47d6-8402-100b3e03b6f8</id>Odpowiedz A</a>
-<a><id>7a8588c4-e673-4103-8343-86a73b76e7f1</id>Odpowiedz B</a>
-<a><id>cf99d0be-ca7d-4eb1-ae18-72bab4cdb9a2</id>Odpowiedz C</a>
-<a><id>a9d5fc4f-0a8e-4c5a-b13c-fec479fe2550</id>Odpowiedz D</a>
-<q><id>69ce46a4-408a-4058-8be3-82e2909a2581</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>3dae1e83-485c-40b3-882f-f654c12acbdd</id>Odpowiedz A</a>
-<a><id>77ed269b-22fc-472c-b2f8-d9994a2e56e9</id>Odpowiedz B</a>
-<a><id>e03b1a82-1362-4d9f-9028-90ecd94c26a0</id>Odpowiedz C</a>
-<a><id>320520aa-54f8-44ed-b935-c2c371fc678f</id>Odpowiedz D</a>
-<q><id>c829243a-4e3c-49d5-a7e5-9f8689061e9b</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>d7198e68-8500-4681-99b2-ecf0fd421d6c</id>Odpowiedz A</a>
-<a><id>4ff30635-a586-432f-9389-2999576eeb21</id>Odpowiedz B</a>
-<a><id>164c97ab-9194-4c36-a8de-dca9727a1acf</id>Odpowiedz C</a>
-<a><id>be36dd38-53d4-42b1-980a-0dc686973cc8</id>Odpowiedz D</a>
-<q><id>a25c9264-0242-4e66-9b0a-5d6a787173ce</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>c8fe8f54-4130-473f-a3b8-e0792ad7b0c3</id>Odpowiedz A</a>
-<a><id>899810e5-f29b-49e8-914e-2b46f585a119</id>Odpowiedz B</a>
-<a><id>47ae24b5-db97-4908-a868-677ff6025e7a</id>Odpowiedz C</a>
-<a><id>45985036-20fc-4b6e-94a5-006dd007b366</id>Odpowiedz D</a>
-<q><id>43811ff3-273f-45c7-91ff-11533ab41353</id>Pytanie numer 1 cos tam cos tam</q>
-<a><id>9e84e37f-8cba-4901-9ec1-327cbb027c39</id>Odpowiedz A</a>
-<a><id>082b2c2a-3d0c-4101-93a3-6b75cc439ecd</id>Odpowiedz B</a>
-<a><id>ca350d0a-7fd2-46d7-a351-c6ef3f6ccf47</id>Odpowiedz C</a>
-<a><id>37a947a6-8a98-4b15-b24d-925f9f3e9fa8</id>Odpowiedz D</a>
+<q><id>9fdfe422-317b-47c6-b418-333a5c04cbfb</id>Managers make changes that are good for me</q>
+<a><id>c66cb296-0bc2-47d2-8a3e-3bacc60d7f42</id>I strongly disagree</a>
+<a><id>8fc789f4-01fe-48fe-bd8a-602ede83be88</id>I rather disagree</a>
+<a><id>49e65a13-d505-42ee-a93b-c10f1c713281</id>I neither agree nor disagree</a>
+<a><id>4159b227-1b88-4341-abb4-e63d9d772dcf</id>I rather agree</a>
+<a><id>5e82cfad-12f2-4050-9004-503c70b0b536</id>I definetly agree</a>
+<q><id>90526d00-ca0c-4f22-88a2-fb0a89b285f7</id>I am personally involved in the changes that are being made in the company</q>
+<a><id>45977290-40c3-44ea-90f2-0053d91b5304</id>I strongly disagree</a>
+<a><id>4519239d-b53b-47aa-9fc1-2cc55e0ea258</id>I rather disagree</a>
+<a><id>d8cfee25-5288-4fe6-87a1-53d1e4dc5000</id>I neither agree nor disagree</a>
+<a><id>0a8df795-b86b-4794-9943-750f3d81d222</id>I rather agree</a>
+<a><id>41686d23-cc07-4735-87e8-33964017276f</id>I definetly agree</a>
+<q><id>d1a9dd16-d008-4cf2-a001-cde48d03441a</id>I am enthusiastic about changes in the company</q>
+<a><id>58289f74-6538-448a-82c6-76ba2780725a</id>I strongly disagree</a>
+<a><id>ea5700e6-535a-4a3b-8740-e94097945b72</id>I rather disagree</a>
+<a><id>90d9380c-5f90-4630-9bb3-085a67e3e40f</id>I neither agree nor disagree</a>
+<a><id>3f5db245-f5ae-411e-b6a1-636ceafe21df</id>I rather agree</a>
+<a><id>b90c2d4f-4c64-46f8-b625-333a78d8dbd2</id>I definetly agree</a>
+<q><id>67270ed1-4bc9-4d62-bdfe-6f6cdbfe87cb</id>I see the connection between my work and the goals pursued by the company</q>
+<a><id>ffbe87e2-e477-490e-be53-810657f4c723</id>I strongly disagree</a>
+<a><id>6732f396-9270-4e11-84b9-739b9a036f62</id>I rather disagree</a>
+<a><id>74671eaf-c41b-4d9b-ba23-24239a35edd9</id>I neither agree nor disagree</a>
+<a><id>401f6d72-a6df-493a-877a-12c80dd357be</id>I rather agree</a>
+<a><id>8cc1b23f-2333-4b66-b7c6-d2ea21fa74e6</id>I definetly agree</a>
+<q><id>e4340edb-5400-46e1-aa3e-dee1c1667976</id>I support company values with my everyday work</q>
+<a><id>fdbcaf7d-5c27-4112-9f16-9a2a657a727e</id>I strongly disagree</a>
+<a><id>29ce99b4-dfee-4730-9caa-2db07f38edbd</id>I rather disagree</a>
+<a><id>ce33020a-db5a-47a4-a529-e752cfb23ad2</id>I neither agree nor disagree</a>
+<a><id>c59710f8-d6a9-4e03-aa24-ec805b8fbbd4</id>I rather agree</a>
+<a><id>9cf5122e-4d6b-4b66-a006-d2f6f1a9fa38</id>I definetly agree</a>
+<q><id>154b5479-0b26-4b54-9098-e46bd7f1f34c</id>It is easy to get information about the personnel policy in the company</q>
+<a><id>58b02c7e-9dbd-465d-8f75-f7c02e84037d</id>I strongly disagree</a>
+<a><id>c631b320-5114-4514-b015-4914b4a5e974</id>I rather disagree</a>
+<a><id>47b1a57e-8745-4326-b0c3-2576074c5938</id>I neither agree nor disagree</a>
+<a><id>46f5c21d-0f08-4118-8cc3-84577e5b56f0</id>I rather agree</a>
+<a><id>87cefc4f-67af-4ae3-b732-babc1c2828e7</id>I definetly agree</a>
