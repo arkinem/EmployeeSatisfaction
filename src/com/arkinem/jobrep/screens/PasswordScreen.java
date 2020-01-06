@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import com.arkinem.jobrep.client.Authentication;
 import com.arkinem.jobrep.components.HeaderLabel;
 import com.arkinem.jobrep.components.PrimaryButton;
 import com.arkinem.jobrep.components.SecondaryButton;
@@ -18,6 +19,7 @@ public class PasswordScreen extends BaseScreen implements ActionListener {
 	 * 
 	 */
 	private static final long serialVersionUID = 9045249603564907250L;
+	private Authentication authentication = new Authentication();
 	private HeaderLabel headerLabel = new HeaderLabel("Provide password");
 	private PrimaryButton signInButton = new PrimaryButton("Sign in");
 	private SecondaryButton backButton = new SecondaryButton("Back");
@@ -27,18 +29,18 @@ public class PasswordScreen extends BaseScreen implements ActionListener {
 	public PasswordScreen(JPanel container) {
 		super();
 		this.container = container;
-		
+
 		passwordField.setBounds(200, 160, 300, 40);
-		
+
 		signInButton.setBounds(370, 380, 100, 40);
 		signInButton.setFont(new Font("Roboto", Font.BOLD, 18));
 		signInButton.addActionListener(this);
-		
+
 		backButton.setBounds(250, 380, 100, 40);
 		backButton.setFont(new Font("Roboto", Font.BOLD, 18));
 		backButton.addActionListener(this);
 
-		add(headerLabel);		
+		add(headerLabel);
 		add(passwordField);
 		add(signInButton);
 		add(backButton);
@@ -50,13 +52,20 @@ public class PasswordScreen extends BaseScreen implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource().equals(signInButton)) {
 			CardLayout layout = (CardLayout) container.getLayout();
-			layout.show(container, "startScreen");
-		}else	if (e.getSource().equals(backButton)) {
+			String password = passwordField.getText();
+
+			if (authentication.authenticateAdmin(password)) {
+				passwordField.setText("");
+				layout.show(container, "adminScreen");
+			} else {
+				System.out.println("password incorrect");
+				// password incorrect
+			}
+		} else if (e.getSource().equals(backButton)) {
 			CardLayout layout = (CardLayout) container.getLayout();
 			layout.show(container, "startScreen");
 		}
-		
-		
+
 	}
 
 }
