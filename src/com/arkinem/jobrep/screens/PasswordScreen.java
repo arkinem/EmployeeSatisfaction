@@ -13,6 +13,7 @@ import javax.swing.SwingConstants;
 
 import com.arkinem.jobrep.client.Authentication;
 import com.arkinem.jobrep.client.Constants;
+import com.arkinem.jobrep.components.ErrorLabel;
 import com.arkinem.jobrep.components.HeaderLabel;
 import com.arkinem.jobrep.components.PrimaryButton;
 import com.arkinem.jobrep.components.SecondaryButton;
@@ -28,7 +29,7 @@ public class PasswordScreen extends BaseScreen implements ActionListener {
 	private JPasswordField passwordField = new JPasswordField(40);
 	private PrimaryButton signInButton = new PrimaryButton("Sign in");
 	private SecondaryButton backButton = new SecondaryButton("Back");
-	private JLabel errorLabel = new JLabel("The password you entered is incorrect.");
+	private ErrorLabel errorLabel = new ErrorLabel("The password you entered is incorrect.");
 	private JPanel container;
 
 	public PasswordScreen(JPanel container) {
@@ -53,11 +54,6 @@ public class PasswordScreen extends BaseScreen implements ActionListener {
 		backButton.addActionListener(this);
 		
 		errorLabel.setBounds(100, 350, 500, 40);
-		errorLabel.setForeground(Constants.errorColor);
-		errorLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		errorLabel.setVerticalAlignment(SwingConstants.CENTER);
-		errorLabel.setFont(new Font("Roboto", Font.BOLD, 14));
-		errorLabel.setVisible(false);
 		
 
 		add(headerLabel);
