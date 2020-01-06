@@ -44,7 +44,7 @@ public class AdminScreen extends BaseScreen implements ActionListener {
 CardLayout layout = (CardLayout) container.getLayout();
 		
 		if (e.getSource().equals(analyseButton)) {
-			layout.show(container, "analyseScreen");
+			layout.show(container, "resultsScreen");
 		}
 
 		if (e.getSource().equals(backButton)) {
