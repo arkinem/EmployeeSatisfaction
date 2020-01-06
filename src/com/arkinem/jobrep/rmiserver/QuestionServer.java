@@ -5,7 +5,6 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
-import java.util.Vector;
 import java.util.stream.Collectors;
 
 import com.arkinem.jobrep.repository.QuestionsRepository;
@@ -14,7 +13,7 @@ import  com.arkinem.jobrep.rmiinterface.Question;
 import  com.arkinem.jobrep.rmiinterface.RemoteQuestions;
 
 public class QuestionServer 
-extends UnicastRemoteObject implements com.arkinem.jobrep.rmiinterface.RemoteQuestions{
+extends UnicastRemoteObject implements RemoteQuestions{
 	/**
 	 * 
 	 */
