@@ -22,10 +22,10 @@ public class AuthenticationServer extends UnicastRemoteObject implements RemoteA
 	@Override
 	public boolean authenticateAdmin(String password) throws RemoteException {
 		String storedPassword = Config.getPassword();
-		
-		if(password == storedPassword)
+
+		if (password.equals(storedPassword))
 			return true;
-		
+
 		return false;
 	}
 
