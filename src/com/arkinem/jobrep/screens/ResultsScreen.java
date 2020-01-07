@@ -1,13 +1,21 @@
 package com.arkinem.jobrep.screens;
 
 import java.awt.CardLayout;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Set;
 
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import org.json.simple.JSONArray;
@@ -135,8 +143,28 @@ public class ResultsScreen extends BaseScreen implements ActionListener {
 		json.put("options", options);
 		json.put("data", data);
 
-		String message = json.toString();
-		System.out.println(message);
+		String chartParamsJson = json.toString();
+
+		try {
+			final String urlStr = "https://quickchart.io/chart?c=" + chartParamsJson;
+			System.out.println("Get Image from " + urlStr);
+			final URL url = new URL(urlStr);
+			final HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+			connection.setRequestProperty("User-Agent",
+					"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31");
+			final BufferedImage image = ImageIO.read(connection.getInputStream());
+
+			Image dimg = image.getScaledInstance(660, 320, Image.SCALE_SMOOTH);
+
+			System.out.println("Load image into frame...");
+			JLabel label = new JLabel(new ImageIcon(dimg));
+			label.setBounds(20, 100, 660, 320);
+			add(label);
+			repaint();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
