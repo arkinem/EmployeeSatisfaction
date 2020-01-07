@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.UUID;
 
 import com.arkinem.jobrep.rmiinterface.Answer;
+import com.arkinem.jobrep.rmiinterface.Question;
 import com.arkinem.jobrep.rmiinterface.RemoteQuestions;
 
 /**
@@ -99,8 +100,13 @@ public class QuestionSet {
 	/**
 	 * Reports the answers in various ways.
 	 */
-	public void reportAnswers() {
-
+	public List<Question> getData() {
+		try {
+			return myQuestions.getData();
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
+		return null;
 //		try {
 //			Answers myAnswers = new Answers(myQuestions.getData());
 //
@@ -112,6 +118,7 @@ public class QuestionSet {
 //			System.out.println("Something went wrong: "+e.toString());
 //			e.printStackTrace();
 //		}  
+
 	}
 
 }

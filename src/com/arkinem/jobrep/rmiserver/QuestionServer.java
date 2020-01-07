@@ -2,13 +2,16 @@ package com.arkinem.jobrep.rmiserver;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
 import com.arkinem.jobrep.repository.QuestionsRepository;
 import com.arkinem.jobrep.repository.ResultsRepository;
+import com.arkinem.jobrep.rmiinterface.Answer;
 import  com.arkinem.jobrep.rmiinterface.Question;
 import  com.arkinem.jobrep.rmiinterface.RemoteQuestions;
 
@@ -54,12 +57,21 @@ extends UnicastRemoteObject implements RemoteQuestions{
 	 */	
 	@Override
 	public List<Question> getData() { 
+		List<Question> data = questions.getAllQuestions();
+		Hashtable<String, Integer> grouped = 
+                new Hashtable<String,  Integer>();
 		
 		Arrays.stream(results.getResults().toArray())
 	      .collect(Collectors.groupingBy(s -> s))
-	      .forEach((k, v) -> System.out.println(k+" "+v.size()));
+	      .forEach((k, v) -> grouped.put(k.toString(),v.size()));
 		
-		return null;
+		for(Question question : data) {
+			for(Answer answer : question.getAnswers()) {
+				answer.setFrequency(grouped.get(answer.getId().toString()));
+			}
+		}
+		
+		return data;
 	}
 
 }

@@ -11,7 +11,7 @@ public class Answer implements Serializable {
 	private static final long serialVersionUID = 3993665747881677110L;
 	private UUID id;
 	private String answerText;
-	private int frequency;
+	private int frequency = 0;
 
 	public Answer(String answerText, int frequency) {
 		this.id = UUID.randomUUID();
@@ -43,7 +43,7 @@ public class Answer implements Serializable {
 		return frequency;
 	}
 
-	public void incrementFrequency() {
-		this.frequency += 1;
+	public void setFrequency(int frequency) {
+		this.frequency = frequency;
 	}
 }
