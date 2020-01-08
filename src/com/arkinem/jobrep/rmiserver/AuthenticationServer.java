@@ -3,7 +3,7 @@ package com.arkinem.jobrep.rmiserver;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import com.arkinem.jobrep.rmiinterface.RemoteAuthentication;
-import com.arkinem.jobrep.utils.Config;
+import com.arkinem.jobrep.utils.PasswordManager;
 
 public class AuthenticationServer extends UnicastRemoteObject implements RemoteAuthentication {
 	/**
@@ -21,12 +21,7 @@ public class AuthenticationServer extends UnicastRemoteObject implements RemoteA
 	 */
 	@Override
 	public boolean authenticateAdmin(String password) throws RemoteException {
-		String storedPassword = Config.getPassword();
-
-		if (password.equals(storedPassword))
-			return true;
-
-		return false;
+		return PasswordManager.authenticateAdmin(password);
 	}
 
 }
