@@ -23,14 +23,7 @@ public class StartServer {
 				String password = new String(console.readPassword());
 				console.printf("Repeat password:\n");
 				String repeatedPassword = new String(console.readPassword());
-				console.printf(password);
-				console.printf(repeatedPassword);
-				if (password.equals(repeatedPassword)) {
 
-					console.printf("eqal");
-				} else {
-					console.printf("not eqal");
-				}
 				if (!PasswordManager.validatePasswordCandidate(password)) {
 					console.printf("Password needs to be minimum 8 characters long.");
 					continue;

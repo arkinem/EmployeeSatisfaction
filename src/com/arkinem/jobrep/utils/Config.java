@@ -1,6 +1,8 @@
 package com.arkinem.jobrep.utils;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -41,6 +43,7 @@ public final class Config {
 
 	public static void setAdminPassword(String password) {
 		props.setProperty("admin_password", password);
+		saveConfig();
 	}
 
 	public static String getPasswordSalt() {
@@ -49,5 +52,16 @@ public final class Config {
 
 	public static void setPasswordSalt(String salt) {
 		props.setProperty("admin_password_salt", salt);
+		saveConfig();
+	}
+
+	private static void saveConfig() {
+		try {
+			props.store(new FileOutputStream("config.properties"), null);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
