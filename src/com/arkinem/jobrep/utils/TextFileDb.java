@@ -29,6 +29,7 @@ public class TextFileDb {
 	public TextFileDb(String name) {
 		filePath = Paths.get(dataDirPath.toString(), name + ".txt");
 		this.createFileIfNotExist(filePath);
+		;
 
 	}
 
@@ -50,7 +51,7 @@ public class TextFileDb {
 
 	public void append(List<String> data) {
 		try {
-			Files.write(filePath, data, StandardCharsets.UTF_8, StandardOpenOption.APPEND);
+			Files.write(filePath, data, StandardCharsets.ISO_8859_1, StandardOpenOption.APPEND);
 		} catch (IOException e) {
 			System.out.println("Filed to write to the file");
 			System.out.println(filePath.toString());

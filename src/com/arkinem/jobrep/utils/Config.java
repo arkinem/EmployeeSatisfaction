@@ -1,5 +1,7 @@
 package com.arkinem.jobrep.utils;
 
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -48,8 +50,26 @@ public final class Config {
 		saveConfig();
 	}
 
-	public static String getPasswordSalt() {
-		return props.getProperty("admin_password_salt");
+	public static byte[] getPasswordSalt() {
+		String salt = props.getProperty("admin_password_salt");
+		// remove [ ]
+		if (salt != null) {
+			salt = salt.substring(1, salt.length() - 1);
+			// split by coma
+			String[] splitted = salt.split(",");
+			// create array for results
+			byte[] result = new byte[splitted.length];
+
+			// iterate over splitted array, convert strings into bytes
+			for (int i = 0; i < splitted.length; i++) {
+				int number = Integer.parseInt(splitted[i].replaceAll("\\s+", ""));
+				result[i] = (byte) number;
+			}
+
+			return result;
+		}
+
+		return null;
 	}
 
 	public static void setPasswordSalt(String salt) {
@@ -59,6 +79,7 @@ public final class Config {
 
 	public static String getHostAddress() {
 		String hostAddress = "";
+
 		try {
 			hostAddress = InetAddress.getLocalHost().getHostAddress();
 		} catch (UnknownHostException e) {
