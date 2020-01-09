@@ -33,7 +33,6 @@ public class PasswordScreen extends BaseScreen implements ActionListener {
 
 		passwordField.setBounds(200, 160, 300, 40);
 
-		passwordField.setText("hehe");
 		signInButton.setBounds(360, 260, 100, 40);
 		signInButton.setFontSize(16);
 		signInButton.addActionListener(this);
