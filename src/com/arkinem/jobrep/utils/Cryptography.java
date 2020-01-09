@@ -11,16 +11,6 @@ import java.security.SecureRandom;
  */
 
 public class Cryptography {
-  public static void main(String[] args) throws NoSuchAlgorithmException, NoSuchProviderException {
-    String passwordToHash = "password";
-    byte[] salt = getSalt();
-
-    String securePassword = getSecurePassword(passwordToHash, salt);
-    System.out.println(securePassword); // Prints 83ee5baeea20b6c21635e4ea67847f66
-
-    String regeneratedPassowrdToVerify = getSecurePassword(passwordToHash, salt);
-    System.out.println(regeneratedPassowrdToVerify); // Prints 83ee5baeea20b6c21635e4ea67847f66
-  }
 
   public static String getSecurePassword(String passwordToHash, byte[] salt) {
     String generatedPassword = null;

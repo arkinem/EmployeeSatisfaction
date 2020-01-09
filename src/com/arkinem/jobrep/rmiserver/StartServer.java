@@ -1,6 +1,8 @@
 package com.arkinem.jobrep.rmiserver;
 
 import java.io.Console;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -25,7 +27,7 @@ public class StartServer {
 				String repeatedPassword = new String(console.readPassword());
 
 				if (!PasswordManager.validatePasswordCandidate(password)) {
-					console.printf("Password needs to be minimum 8 characters long.");
+					console.printf("Password needs to be minimum 8 characters long.\n");
 					continue;
 				}
 
@@ -43,10 +45,14 @@ public class StartServer {
 		try {
 			RemoteQuestions questions = new QuestionServer();
 			RemoteAuthentication authentication = new AuthenticationServer();
+			int port = Config.getPort();
+			String hostAddress = Config.getHostAddress();
+			Registry reg = LocateRegistry.createRegistry(port);
 
-			Registry reg = LocateRegistry.createRegistry(Config.getPort());
 			reg.rebind("QuestionService", questions);
 			reg.rebind("AuthenticationService", authentication);
+
+			System.out.println("RMI Server is listening on " + hostAddress + " port " + port);
 		} catch (RemoteException e) {
 			System.out.println("An error occured: " + e.toString());
 			e.printStackTrace();

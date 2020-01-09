@@ -13,7 +13,7 @@ public class AuthenticationServer extends UnicastRemoteObject implements RemoteA
 
 	AuthenticationServer() throws RemoteException {
 		super();
-		System.out.println("Authentication Server created.");
+		System.out.println("Authentication Server created");
 	}
 
 	/**

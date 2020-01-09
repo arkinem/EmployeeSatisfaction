@@ -7,12 +7,11 @@ import java.util.UUID;
 import com.arkinem.jobrep.rmiinterface.Answer;
 import com.arkinem.jobrep.rmiinterface.Question;
 
-
 public final class FilestringParser {
 	public enum TokenType {
 		ID, QUESTION, ANSWER
 	}
-	
+
 	public static List<String> convertQuestionToFilestring(Question question) {
 		List<String> result = new ArrayList<String>();
 		String questionId = tokenize(question.getId().toString(), TokenType.ID);
@@ -27,7 +26,7 @@ public final class FilestringParser {
 
 		return result;
 	}
-	
+
 	public static List<Question> convertFilestringToQuestions(String filestring) {
 		List<Question> result = new ArrayList<Question>();
 
@@ -41,22 +40,20 @@ public final class FilestringParser {
 				String answers = question.split("</q>")[1];
 
 				List<Answer> answersResult = new ArrayList<Answer>();
-				
+
 				for (String answer : answers.split("</a>")) {
-					UUID answerId = UUID.fromString(answer.substring(7).split("</id>")[0]); 
+					UUID answerId = UUID.fromString(answer.substring(7).split("</id>")[0]);
 					String answerText = answer.split("</id>")[1];
 					answersResult.add(new Answer(answerId, answerText));
 				}
-				
+
 				result.add(new Question(id, questionText, answersResult));
 			}
 		}
 
-
-		System.out.println(result.size());
 		return result;
 	}
-	
+
 	private static String tokenize(String text, TokenType type) {
 		String token = "";
 

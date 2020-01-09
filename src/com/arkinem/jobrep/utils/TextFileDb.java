@@ -72,13 +72,8 @@ public class TextFileDb {
 	}
 
 	Consumer<String> forEachRow = s -> {
-//		System.out.println(s);
 		resultString += s;
 	};
-
-	public void c() {
-		System.out.println(resultString);
-	}
 
 	public static List<String> convertQuestionToFilestring(Question question) {
 		List<String> result = new ArrayList<String>();
@@ -108,19 +103,17 @@ public class TextFileDb {
 				String answers = question.split("</q>")[1];
 
 				List<Answer> answersResult = new ArrayList<Answer>();
-				
+
 				for (String answer : answers.split("</a>")) {
-					UUID answerId = UUID.fromString(answer.substring(7).split("</id>")[0]); 
+					UUID answerId = UUID.fromString(answer.substring(7).split("</id>")[0]);
 					String answerText = answer.split("</id>")[1];
 					answersResult.add(new Answer(answerId, answerText));
 				}
-				
+
 				result.add(new Question(id, questionText, answersResult));
 			}
 		}
 
-
-		System.out.println(result.size());
 		return result;
 	}
 

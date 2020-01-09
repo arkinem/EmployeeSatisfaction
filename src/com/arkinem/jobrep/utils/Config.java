@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.Properties;
 
 public final class Config {
@@ -53,6 +55,17 @@ public final class Config {
 	public static void setPasswordSalt(String salt) {
 		props.setProperty("admin_password_salt", salt);
 		saveConfig();
+	}
+
+	public static String getHostAddress() {
+		String hostAddress = "";
+		try {
+			hostAddress = InetAddress.getLocalHost().getHostAddress();
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+
+		return hostAddress;
 	}
 
 	private static void saveConfig() {

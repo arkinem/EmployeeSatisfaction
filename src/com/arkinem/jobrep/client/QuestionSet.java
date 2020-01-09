@@ -107,18 +107,6 @@ public class QuestionSet {
 			e.printStackTrace();
 		}
 		return null;
-//		try {
-//			Answers myAnswers = new Answers(myQuestions.getData());
-//
-//			System.out.println("Basic analysis:");
-//			System.out.println(myAnswers.basicAnalysis());
-//
-//			ShowImageFromURL.show(myAnswers.getBarChartURL());
-//		} catch (RemoteException e) {
-//			System.out.println("Something went wrong: "+e.toString());
-//			e.printStackTrace();
-//		}  
-
 	}
 
 }
