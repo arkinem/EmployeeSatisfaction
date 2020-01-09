@@ -51,7 +51,7 @@ public class StartServer {
 				}
 
 				if (password.equals(repeatedPassword)) {
-					PasswordManager.setAdminPassword(password.toString());
+					PasswordManager.setAdminPassword(password);
 					validPassword = true;
 				}
 			}

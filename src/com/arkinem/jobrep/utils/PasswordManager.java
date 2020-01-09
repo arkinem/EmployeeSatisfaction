@@ -20,7 +20,7 @@ public final class PasswordManager {
       byte[] salt = Cryptography.getSalt();
       String hashedPassword = Cryptography.getSecurePassword(password, salt);
       Config.setAdminPassword(hashedPassword);
-      Config.setPasswordSalt(salt.toString());
+      Config.setPasswordSalt(new String(salt));
     } catch (NoSuchAlgorithmException e) {
       e.printStackTrace();
     } catch (NoSuchProviderException e) {
@@ -32,12 +32,8 @@ public final class PasswordManager {
   public static boolean authenticateAdmin(String password) {
     String storedHash = Config.getAdminPassword();
     byte[] salt = Config.getPasswordSalt().getBytes();
-    String passwordHash = Cryptography.getSecurePassword(password, salt);
 
-    if (passwordHash.equals(storedHash))
-      return true;
-
-    return false;
+    return Cryptography.verify(password, storedHash, salt);
   }
 
   public static boolean validatePasswordCandidate(String password) {
