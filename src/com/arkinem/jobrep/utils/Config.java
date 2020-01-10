@@ -1,7 +1,5 @@
 package com.arkinem.jobrep.utils;
 
-import java.io.ByteArrayOutputStream;
-import java.io.DataOutputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -18,14 +16,10 @@ public final class Config {
 
 	private static Properties readConfig() {
 		try (InputStream input = new FileInputStream(configPath)) {
-
 			Properties prop = new Properties();
-
-			// load a properties file
 			prop.load(input);
 
 			return prop;
-
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
@@ -52,15 +46,12 @@ public final class Config {
 
 	public static byte[] getPasswordSalt() {
 		String salt = props.getProperty("admin_password_salt");
-		// remove [ ]
+		
 		if (salt != null) {
-			salt = salt.substring(1, salt.length() - 1);
-			// split by coma
-			String[] splitted = salt.split(",");
-			// create array for results
+			salt = salt.substring(1, salt.length() - 1); // remove [ ]
+			String[] splitted = salt.split(","); 
 			byte[] result = new byte[splitted.length];
 
-			// iterate over splitted array, convert strings into bytes
 			for (int i = 0; i < splitted.length; i++) {
 				int number = Integer.parseInt(splitted[i].replaceAll("\\s+", ""));
 				result[i] = (byte) number;
