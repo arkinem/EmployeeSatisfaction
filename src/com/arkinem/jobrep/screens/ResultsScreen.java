@@ -29,6 +29,7 @@ import com.arkinem.jobrep.rmiinterface.Question;
 
 /**
  * Screen that shows a graph of the answers
+ * 
  * @author Blazej Golinski
  *
  */
@@ -37,6 +38,7 @@ public class ResultsScreen extends BaseScreen implements ActionListener {
 	private HeaderLabel headerLabel = new HeaderLabel("Results");
 	private SecondaryButton backButton = new SecondaryButton("Back");
 	private QuestionSet questionnaire = new QuestionSet();
+	private JLabel imageContainer;
 	private JPanel container;
 
 	public ResultsScreen(JPanel container) {
@@ -48,14 +50,50 @@ public class ResultsScreen extends BaseScreen implements ActionListener {
 		backButton.setFontSize(18);
 		backButton.addActionListener(this);
 
+		Image chart = getImageFromData();
+		imageContainer = new JLabel(new ImageIcon(chart));
+		imageContainer.setBounds(20, 100, 660, 320);
+
 		add(headerLabel);
 		add(backButton);
+		add(imageContainer);
 		repaint();
-		test();
 	}
 
-	public void test() {
+	public Image getImageFromData() {
+		String chartParamsJson = dataToChartParams();
 
+		try {
+			String urlStr = "https://quickchart.io/chart?c=" + chartParamsJson;
+			System.out.println("Get Image from " + urlStr);
+			URL url = new URL(urlStr);
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+			connection.setRequestProperty("User-Agent",
+					"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31");
+			BufferedImage image = ImageIO.read(connection.getInputStream());
+
+			return image.getScaledInstance(660, 320, Image.SCALE_SMOOTH);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return null;
+	}
+
+	/*
+	 * When back button is pressed it navigates back to the AdminScreen
+	 */
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		CardLayout layout = (CardLayout) container.getLayout();
+
+		if (e.getSource().equals(backButton)) {
+			layout.show(container, "adminScreen");
+		}
+	}
+
+	private String dataToChartParams() {
 		List<Question> results = questionnaire.getData();
 
 		Hashtable<String, List<Integer>> precentage = new Hashtable<String, List<Integer>>();
@@ -144,41 +182,6 @@ public class ResultsScreen extends BaseScreen implements ActionListener {
 		json.put("options", options);
 		json.put("data", data);
 
-		String chartParamsJson = json.toString();
-
-		try {
-			final String urlStr = "https://quickchart.io/chart?c=" + chartParamsJson;
-			System.out.println("Get Image from " + urlStr);
-			final URL url = new URL(urlStr);
-			final HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-			connection.setRequestProperty("User-Agent",
-					"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31");
-			final BufferedImage image = ImageIO.read(connection.getInputStream());
-
-			Image dimg = image.getScaledInstance(660, 320, Image.SCALE_SMOOTH);
-
-			System.out.println("Load image into frame...");
-			JLabel label = new JLabel(new ImageIcon(dimg));
-			label.setBounds(20, 100, 660, 320);
-			add(label);
-			repaint();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
+		return json.toString();
 	}
-
-	/*
-	 * When back button is pressed it navigates back to the AdminScreen
-	 */
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		CardLayout layout = (CardLayout) container.getLayout();
-
-		if (e.getSource().equals(backButton)) {
-			layout.show(container, "adminScreen");
-		}
-	}
-
 }
