@@ -60,12 +60,15 @@ public class ResultsScreen extends BaseScreen implements ActionListener {
 		repaint();
 	}
 
+	/**
+	 * get image for persisted answers data
+	 * @return image with the chart
+	 */
 	public Image getImageFromData() {
 		String chartParamsJson = dataToChartParams();
 
 		try {
 			String urlStr = "https://quickchart.io/chart?c=" + chartParamsJson;
-			System.out.println("Get Image from " + urlStr);
 			URL url = new URL(urlStr);
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 			connection.setRequestProperty("User-Agent",
@@ -74,7 +77,6 @@ public class ResultsScreen extends BaseScreen implements ActionListener {
 
 			return image.getScaledInstance(660, 320, Image.SCALE_SMOOTH);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -93,6 +95,10 @@ public class ResultsScreen extends BaseScreen implements ActionListener {
 		}
 	}
 
+	/**
+	 * convers questionnaire data into json string
+	 * @return json string
+	 */
 	private String dataToChartParams() {
 		List<Question> results = questionnaire.getData();
 
@@ -168,7 +174,6 @@ public class ResultsScreen extends BaseScreen implements ActionListener {
 			JSONObject dataObj = new JSONObject();
 			dataObj.put("label", key);
 			dataObj.put("data", dataArray);
-			System.out.println(key);
 			dataObj.put("backgroundColor", colors[Integer.parseInt(key)]);
 			datasets.add(dataObj);
 		}
