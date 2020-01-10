@@ -14,14 +14,20 @@ import com.arkinem.jobrep.rmiinterface.Answer;
 import com.arkinem.jobrep.rmiinterface.Question;
 import com.arkinem.jobrep.rmiinterface.RemoteQuestions;
 
+/**
+ * Implementation of the questionnaire. 
+ * @author Blazej Golinski
+ *
+ */
 public class QuestionServer extends UnicastRemoteObject implements RemoteQuestions {
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -2834956567289941412L;
 	private QuestionsRepository questions;
 	private ResultsRepository results;
 
+	/**
+	 * QuestionServer initialises questions and results repositories.
+	 * Prints message to the console  when server is created.
+	 */
 	QuestionServer() throws RemoteException {
 		super();
 		questions = new QuestionsRepository();
