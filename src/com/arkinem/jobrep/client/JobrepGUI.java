@@ -10,13 +10,18 @@ import com.arkinem.jobrep.screens.QuestionsScreen;
 import com.arkinem.jobrep.screens.ResultsScreen;
 import com.arkinem.jobrep.screens.StartScreen;
 
+/**
+ * A GUI to implement a employee satisfaction questionnaire
+ * @author Blazej Golinski
+ *
+ */
 public class JobrepGUI extends JPanel {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 668891012501699891L;
-
+	
+	/**
+	 * initialises frame 
+	 * @param frame
+	 */
 	public void init(JFrame frame) {
 		frame.setSize(700, 480);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -26,6 +31,10 @@ public class JobrepGUI extends JPanel {
 		frame.setVisible(true);
 	}
 	
+	/**
+	 * initialises panels (screens) and adds them to card layout
+	 * @return panel, which layout can be use for navigation
+	 */
 	private JPanel setUpPanels() {
 		CardLayout layout = new CardLayout();
 		JPanel panels = new JPanel(layout);
@@ -45,10 +54,10 @@ public class JobrepGUI extends JPanel {
 		return panels;
 	}
 
-	private JobrepGUI() {
-		super();
-	}
-
+	/**
+	 * Entry point of the client app
+	 * @param args ignored
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("Employee satisfaction");
 		JobrepGUI changer = new JobrepGUI();

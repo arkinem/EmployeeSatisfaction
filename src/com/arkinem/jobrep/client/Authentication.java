@@ -8,7 +8,6 @@ import com.arkinem.jobrep.rmiinterface.RemoteAuthentication;
 /**
  * Represents the authentication locally. All requests from peripherals will be
  * through this class.
- * 
  * @author arkinem
  */
 public class Authentication {
@@ -16,8 +15,7 @@ public class Authentication {
 	RemoteAuthentication authentication;
 
 	/**
-	 * Retrieves the questions from the server. To do: connect to different servers,
-	 * make configurable.
+	 * Retrieves the authentication from the server
 	 */
 	public Authentication() {
 		super();
@@ -33,7 +31,7 @@ public class Authentication {
 	/**
 	 * Authenticate admin using provided password
 	 * 
-	 * @return authentication successful/unsuccessful
+	 * @return true if authentication successful, otherwise false
 	 */
 	public boolean authenticateAdmin(String password) {
 		try {

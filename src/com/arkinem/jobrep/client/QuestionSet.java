@@ -13,15 +13,15 @@ import com.arkinem.jobrep.rmiinterface.RemoteQuestions;
  * Represents the questionnaire locally. All requests from peripherals will be
  * through this class.
  * 
- * @author Marc Conrad modified by arkinem
+ * @author Marc Conrad
+ * @author Blazej Golinski
  */
 public class QuestionSet {
 
 	RemoteQuestions myQuestions;
 
 	/**
-	 * Retrieves the questions from the server. To do: connect to different servers,
-	 * make configurable.
+	 * Retrieves the questions from the server. 
 	 */
 	public QuestionSet() {
 		super();
@@ -39,7 +39,6 @@ public class QuestionSet {
 	 * 
 	 * @return number of questions.
 	 */
-
 	public int numberOfQuestions() {
 		try {
 			return myQuestions.getNumberOfQuestions();
@@ -70,7 +69,7 @@ public class QuestionSet {
 	 * Gives a set of options for this question.
 	 * 
 	 * @param i the number of the question.
-	 * @return an array of options.
+	 * @return a list of answers.
 	 */
 	public List<Answer> getOptions(int i) {
 		try {
@@ -85,8 +84,7 @@ public class QuestionSet {
 	/**
 	 * Submit the answer to a given question.
 	 * 
-	 * @param i      the question.
-	 * @param answer the chosen answer.
+	 * @param answerId answer id
 	 */
 	public void submitAnswer(UUID answerId) {
 		try {

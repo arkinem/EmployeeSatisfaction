@@ -2,6 +2,11 @@ package com.arkinem.jobrep.client;
 
 import java.awt.Color;
 
+/**
+ * File that stores common used colors
+ * @author Blazej Golinski
+ *
+ */
 public final class Constants {
 
 	 public static final Color backgroundColor = new Color(22,28,31);
