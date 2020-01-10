@@ -7,10 +7,10 @@ import java.util.UUID;
 
 /**
  * RMI interface to enable to retrieve questions from the server and to submit
- * data to the server.
+ * data to the server. It also allows to get summary data from the server.
  * 
  * @author Marc Conrad
- * Modified by arkinem
+ * @author Blazej Golinski
  */
 public interface RemoteQuestions extends Remote {
 	/**
@@ -31,10 +31,9 @@ public interface RemoteQuestions extends Remote {
 	public Question getQuestion(int i) throws RemoteException;
 
 	/**
-	 * Submit the answer to the question number i.
+	 * Submit the answer for given answer id.
 	 * 
-	 * @param i      question where the answer belongs to.
-	 * @param answer the answer given to this question.
+	 * @param answerId id of the answer
 	 * @throws RemoteException
 	 */
 	public void submitAnswer(UUID answerId) throws RemoteException;
@@ -42,7 +41,7 @@ public interface RemoteQuestions extends Remote {
 	/**
 	 * Returns the answers to the questions given.
 	 * 
-	 * @return answers to the questions.
+	 * @return summary data of the questionnaire.
 	 * @throws RemoteException
 	 */
 	public List<Question> getData() throws RemoteException;
