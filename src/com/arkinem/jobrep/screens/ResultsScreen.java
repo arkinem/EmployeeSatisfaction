@@ -27,11 +27,12 @@ import com.arkinem.jobrep.components.SecondaryButton;
 import com.arkinem.jobrep.rmiinterface.Answer;
 import com.arkinem.jobrep.rmiinterface.Question;
 
+/**
+ * Screen that shows a graph of the answers
+ * @author Blazej Golinski
+ *
+ */
 public class ResultsScreen extends BaseScreen implements ActionListener {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 6991683534267402390L;
 	private HeaderLabel headerLabel = new HeaderLabel("Results");
 	private SecondaryButton backButton = new SecondaryButton("Back");
@@ -168,6 +169,9 @@ public class ResultsScreen extends BaseScreen implements ActionListener {
 
 	}
 
+	/*
+	 * When back button is pressed it navigates back to the AdminScreen
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		CardLayout layout = (CardLayout) container.getLayout();
