@@ -10,29 +10,51 @@ import com.arkinem.jobrep.rmiinterface.RemoteQuestions;
 import com.arkinem.jobrep.utils.Config;
 import com.arkinem.jobrep.utils.PasswordManager;
 
+/**
+ * Entry point of the server. 
+ * @author Blazej Golinski
+ *
+ */
 public class StartServer {
+	private static int port =  Config.getPort();
+	private static String hostAddress = Config.getHostAddress();
 
+	/**
+	 * Main method makes sure that administrator password exists and starts 
+	 * server setup. If startup is successful it prints message with host address
+	 * and port number
+	 * @param args args are ignored
+	 */
 	public static void main(String[] args) {
 		setUpAdministrator();
 
 		try {
-			RemoteQuestions questions = new QuestionServer();
-			RemoteAuthentication authentication = new AuthenticationServer();
-			int port = Config.getPort();
-			String hostAddress = Config.getHostAddress();
-			Registry reg = LocateRegistry.createRegistry(port);
-
-			reg.rebind("QuestionService", questions);
-			reg.rebind("AuthenticationService", authentication);
-
+			setUpServer();
 			System.out.println("RMI Server is listening on " + hostAddress + " port " + port);
 		} catch (RemoteException e) {
-			System.out.println("An error occured: " + e.toString());
 			e.printStackTrace();
 		}
 
 	}
+	
+	/**
+	 * Creates servers instances and binds them to RMI registry
+	 * @throws RemoteException
+	 */
+	private static void setUpServer() throws RemoteException {
+		RemoteQuestions questions = new QuestionServer();
+		RemoteAuthentication authentication = new AuthenticationServer();
+		Registry reg = LocateRegistry.createRegistry(port);
 
+		reg.rebind("QuestionService", questions);
+		reg.rebind("AuthenticationService", authentication);
+	}
+
+	/**
+	 * Before server starts it makes sure that admin password exist using 
+	 * PasswordManager class. If password is not present it handles the interaction
+	 * with a user to set up a new password. 
+	 */
 	private static void setUpAdministrator() {
 		if (!PasswordManager.checkIfAdminPasswordExist()) {
 			Console console = System.console();
