@@ -14,17 +14,23 @@ import com.arkinem.jobrep.components.AnswerPanel;
 import com.arkinem.jobrep.components.QuestionLabel;
 import com.arkinem.jobrep.rmiinterface.Answer;
 
+/**
+ * Screen that handles questionnaire process. When all answers are submitted
+ * it navigates back to the StartScreen
+ * @author Blazej Golinski
+ *
+ */
 public class QuestionsScreen extends BaseScreen {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -9146101605724855605L;
 	private QuestionLabel questionLabel = new QuestionLabel();
 	private QuestionSet questionnaire = new QuestionSet();
 	private List<AnswerPanel> answerPanels = new ArrayList<AnswerPanel>();
 	private int questionIndex = 0;
 
+	/**
+	 * It initialises screen with question label and answer panels.	 
+	 * @param container a parent component
+	 */
 	public QuestionsScreen(JPanel container) {
 		add(questionLabel);
 		for (int i = 0; i < 5; i++) {
@@ -60,6 +66,9 @@ public class QuestionsScreen extends BaseScreen {
 		renderQuestion();
 	}
 
+	/**
+	 * Repaints questionLabel and answerPanel with next question's content
+	 */
 	private void renderQuestion() {
 		questionLabel.setText(questionnaire.getQuestion(questionIndex));
 

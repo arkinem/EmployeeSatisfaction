@@ -12,16 +12,17 @@ import com.arkinem.jobrep.components.HeaderLabel;
 import com.arkinem.jobrep.components.PrimaryButton;
 
 public class StartScreen extends BaseScreen implements ActionListener {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 6715262679079405609L;
 	private PrimaryButton startButton = new PrimaryButton("Start Questionnaire");
 	private SecondaryButton adminButton = new SecondaryButton("Admin");
 	private HeaderLabel headerLabel = new HeaderLabel("Employee satisfaction");
 	private JPanel container;
 
+	/**
+	 * It initialises screen with start questionnaire and administrator button as well 
+	 * as an header label
+	 * @param container a parent component
+	 */
 	public StartScreen(JPanel container) {
 		super();
 		this.container = container;
@@ -40,6 +41,10 @@ public class StartScreen extends BaseScreen implements ActionListener {
 		repaint();
 	}
 
+	/**
+	 * Depends on which button user clicks it navigates to the QuestionsScreen
+	 * or to administrator password prompt.
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		CardLayout layout = (CardLayout) container.getLayout();

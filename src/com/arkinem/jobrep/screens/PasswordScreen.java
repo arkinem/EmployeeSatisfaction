@@ -13,11 +13,12 @@ import com.arkinem.jobrep.components.PasswordField;
 import com.arkinem.jobrep.components.PrimaryButton;
 import com.arkinem.jobrep.components.SecondaryButton;
 
+/**
+ * Screen that contains a password entry for administrator
+ * @author Blazej Golinski
+ *
+ */
 public class PasswordScreen extends BaseScreen implements ActionListener {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 9045249603564907250L;
 	private Authentication authentication = new Authentication();
 	private HeaderLabel headerLabel = new HeaderLabel("Provide password");
@@ -27,6 +28,12 @@ public class PasswordScreen extends BaseScreen implements ActionListener {
 	private ErrorLabel errorLabel = new ErrorLabel("The password you entered is incorrect.");
 	private JPanel container;
 
+	/**
+	 * It initialises screen with sign in and back button as well as error 
+	 * label placeholder.
+	 * 
+	 * @param container a parent component
+	 */
 	public PasswordScreen(JPanel container) {
 		super();
 		this.container = container;
