@@ -7,11 +7,21 @@ import java.util.UUID;
 import com.arkinem.jobrep.rmiinterface.Answer;
 import com.arkinem.jobrep.rmiinterface.Question;
 
+/**
+ * This class helps with conversion between Question objects and string from file
+ * @author Blazej Golinski
+ *
+ */
 public final class FilestringParser {
 	public enum TokenType {
 		ID, QUESTION, ANSWER
 	}
 
+	/**
+	 * converts question to the string that can be saved into config
+	 * @param question question to convert
+	 * @return filestring
+	 */
 	public static List<String> convertQuestionToFilestring(Question question) {
 		List<String> result = new ArrayList<String>();
 		String questionId = tokenize(question.getId().toString(), TokenType.ID);
@@ -27,6 +37,11 @@ public final class FilestringParser {
 		return result;
 	}
 
+	/**
+	 * converts string from file to questions list
+	 * @param filestring string from file
+	 * @return	question list
+	 */
 	public static List<Question> convertFilestringToQuestions(String filestring) {
 		List<Question> result = new ArrayList<Question>();
 
@@ -54,6 +69,12 @@ public final class FilestringParser {
 		return result;
 	}
 
+	/**
+	 * adds html-like token around text
+	 * @param text text to wrap
+	 * @param type token type
+	 * @return tokenized text
+	 */
 	private static String tokenize(String text, TokenType type) {
 		String token = "";
 
