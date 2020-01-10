@@ -92,11 +92,19 @@ public final class Config {
 		return null;
 	}
 
+	/**
+	 * set password salt
+	 * @param salt admin password salt
+	 */
 	public static void setPasswordSalt(String salt) {
 		props.setProperty("admin_password_salt", salt);
 		saveConfig();
 	}
 
+	/**
+	 * get local host address
+	 * @return localhost address
+	 */
 	public static String getHostAddress() {
 		String hostAddress = "";
 
@@ -109,6 +117,9 @@ public final class Config {
 		return hostAddress;
 	}
 
+	/**
+	 * saves any changes to config object into file. 
+	 */
 	private static void saveConfig() {
 		try {
 			props.store(new FileOutputStream("config.properties"), null);
